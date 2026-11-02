@@ -1,0 +1,159 @@
+{
+  "recordedDate": "2026-11-02",
+  "status": "Initial environment configured and Editor Play checked; experiment parameters not frozen",
+  "verificationScope": "Unity Editor, not standalone build or performance benchmark",
+  "versions": {
+    "editor": "6000.6.5f1",
+    "revision": "3ff58d469c8a",
+    "urp": "17.6.0",
+    "core": "17.6.0"
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+    "ramMB": 65373,
+    "gpuMemoryMB": 12012,
+    "operatingSystem": "Windows 10  (10.0.19045) 64bit",
+    "nvidiaDriverVersion": "617.42",
+    "driverVersionSource": "nvidia-smi --query-gpu=name,driver_version,memory.total"
+  },
+  "configuration": {
+    "unityVersion": "6000.6.5f1",
+    "scene": "Assets/Scenes/PCF_Baseline.unity",
+    "sceneSaved": true,
+    "mode": "Edit",
+    "graphicsApi": "Direct3D11",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "gpuRecorderSupported": true,
+    "activePipeline": "Assets/Experiments/Settings/PCF_Baseline_URP.asset",
+    "defaultPipeline": "Assets/Experiments/Settings/PCF_Baseline_URP.asset",
+    "qualityPipeline": "Assets/Experiments/Settings/PCF_Baseline_URP.asset",
+    "qualityName": "PC",
+    "renderer": "Assets/Experiments/Settings/PCF_Baseline_Renderer.asset",
+    "renderingMode": "Forward",
+    "rendererFeatures": 0,
+    "hdr": false,
+    "msaa": 1,
+    "renderScale": 1,
+    "gpuResidentDrawer": "Disabled",
+    "pipelineSoftShadowQuality": 3,
+    "mainLightShadowmapResolution": 2048,
+    "shadowCascades": 1,
+    "shadowDistance": 50,
+    "depthBiasInput": 0.1,
+    "normalBiasInput": 0.5,
+    "additionalLightMode": "Disabled",
+    "additionalLightShadows": false,
+    "camera": {
+      "position": [
+        8,
+        7,
+        -11
+      ],
+      "rotation": [
+        23.9646435,
+        325.6372,
+        -4.67157548e-07
+      ],
+      "fieldOfView": 45,
+      "near": 0.1,
+      "far": 100,
+      "post": false,
+      "aa": "None",
+      "hdr": false,
+      "msaa": false,
+      "dynamicResolution": false,
+      "occlusionCulling": false
+    },
+    "light": {
+      "type": "Directional",
+      "rotation": [
+        45,
+        145,
+        1.20741834e-06
+      ],
+      "intensity": 1,
+      "shadows": "Soft",
+      "quality": "High",
+      "shadowStrength": 1,
+      "biasUsesPipeline": true,
+      "bakeType": "Realtime"
+    },
+    "player": {
+      "width": 1920,
+      "height": 1080,
+      "mode": "Windowed",
+      "resizable": false,
+      "runInBackground": true,
+      "frameTimingStats": true,
+      "graphicsApis": [
+        "Direct3D11"
+      ]
+    },
+    "vSync": 0,
+    "targetFrameRate": -1,
+    "colorSpace": "Linear",
+    "fullPlayModeReload": true,
+    "gameViewPresetIndex": 3,
+    "buildScenes": [
+      {
+        "path": "Assets/Scenes/PCF_Baseline.unity",
+        "enabled": true
+      },
+      {
+        "path": "Assets/Scenes/SampleScene.unity",
+        "enabled": false
+      }
+    ]
+  },
+  "editorPlayCheck": {
+    "playing": true,
+    "width": 1920,
+    "height": 1080,
+    "cameraWidth": 1920,
+    "cameraHeight": 1080,
+    "cameraAspect": 1.77777779,
+    "activePipeline": "Assets/Experiments/Settings/PCF_Baseline_URP.asset",
+    "vSync": 0,
+    "frameLimit": -1,
+    "post": false,
+    "AA": "None",
+    "msaa": 1,
+    "renderScale": 1,
+    "cascades": 1,
+    "shadowMap": 2048,
+    "shadowDistance": 50,
+    "depthBias": 0.1,
+    "normalBias": 0.5,
+    "lightShadowQuality": "High",
+    "lightBiasUsesPipeline": true,
+    "lightEuler": "(45.00, 145.00, 0.00)",
+    "api": "Direct3D11",
+    "gpuRecorderSupported": true,
+    "frameTimingEnabled": true
+  },
+  "shaderKeywordCheck": {
+    "highKeyword": false,
+    "lowKeyword": false,
+    "mediumKeyword": false,
+    "softKeyword": true,
+    "mainLightShadowKeyword": true,
+    "screenSpaceShadowKeyword": false,
+    "ssaoKeyword": false
+  },
+  "shadowParameterReadback": {
+    "scene": "Assets/Scenes/PCF_Baseline.unity",
+    "sceneDirty": false,
+    "shadowStrength": 1,
+    "softShadowQuality": 3,
+    "shadowFadeScale": 0.00196169573,
+    "shadowFadeBias": -3.90423918,
+    "playing": false
+  },
+  "notes": [
+    "Initial parameters, not frozen experiment settings.",
+    "The scene was checked in Editor Play mode; standalone Player behaviour has not been checked.",
+    "GPU timing capability was detected; no benchmark samples or performance comparison are provided.",
+    "Game View resolution is an editor setting: select Full HD after opening a fresh clone."
+  ]
+}

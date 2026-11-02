@@ -1,0 +1,43 @@
+{
+  "recordedDate": "2026-11-02",
+  "editorVersion": "6000.6.5f1",
+  "note": "Unmodified local package files recorded during initial environment setup; these are source hashes, not GPU execution or equivalence evidence.",
+  "files": [
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "ShaderLibrary/Shadows.hlsl",
+      "sha256": "41DBE5965EF3F3CD6E7FC8F6625081BDDE9B3752571B9FD2B7A8ECA70ABBA4B0"
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "Runtime/ShadowUtils.cs",
+      "sha256": "04C4CBDA8BD90C2AEC2B2EA10744AD46006CC543F47448C57071506A987279A8"
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "Runtime/UniversalAdditionalLightData.cs",
+      "sha256": "153B5DC903B054643546309597A84F3A24BAD3BBDA728394004DF06B127B352D"
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "Runtime/Data/UniversalRenderPipelineAsset.cs",
+      "sha256": "46D4BCE69FEB53CC9AF148D5B554C87BB46FE56B91603C0080D1D7D658CE94AF"
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "Runtime/UniversalRenderer.cs",
+      "sha256": "088DD420A0F17734DAE877A9F95D351CACB67203F52B006F7921B010485859D2"
+    },
+    {
+      "package": "com.unity.render-pipelines.core",
+      "version": "17.6.0",
+      "path": "ShaderLibrary/Shadow/ShadowSamplingTent.hlsl",
+      "sha256": "77E2D61FDCFA891D5164653D6E0B3FD0666987189AA9D67A826209C457144A9B"
+    }
+  ]
+}
