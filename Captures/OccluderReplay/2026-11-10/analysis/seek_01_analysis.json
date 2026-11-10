@@ -1,0 +1,134 @@
+{
+  "run": "seek_01",
+  "status": "passed",
+  "order": "seek",
+  "requested_and_validated_captures": 12,
+  "csv_columns": 22,
+  "fixed_controls_hash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+  "fixed_controls_semantic_sha256": "326ca134463b55f6b494176f39fae2d4a653cf007f07a50f9c08babef84aa55a",
+  "first_last_endpoint_comparison": {
+    "png_bytes_exact": true,
+    "decoded_rgba_exact": true
+  },
+  "frame_0_vs_60": {
+    "changed_pixel_count": 108641,
+    "bounding_box": [
+      518,
+      397,
+      923,
+      793
+    ],
+    "meaning": "Visible-change diagnostic, not a temporal quality metric"
+  },
+  "initial_transform_restored": true,
+  "preview_after_capture": false,
+  "frames": [
+    {
+      "sequence": 0,
+      "frame_index": 120,
+      "png_file": "s000_f120.png",
+      "metadata_file": "s000_f120.json",
+      "png_sha256": "1af9c457b0e3ac5e89e56f73b5415768eb77d119520dc3a9bf1167fc136f01d3",
+      "decoded_rgba_sha256": "436b5f3f6fdf639da3586250c21ee3184fab44219ffaddac0c007bf64ce107d2"
+    },
+    {
+      "sequence": 1,
+      "frame_index": 0,
+      "png_file": "s001_f000.png",
+      "metadata_file": "s001_f000.json",
+      "png_sha256": "1af9c457b0e3ac5e89e56f73b5415768eb77d119520dc3a9bf1167fc136f01d3",
+      "decoded_rgba_sha256": "436b5f3f6fdf639da3586250c21ee3184fab44219ffaddac0c007bf64ce107d2"
+    },
+    {
+      "sequence": 2,
+      "frame_index": 60,
+      "png_file": "s002_f060.png",
+      "metadata_file": "s002_f060.json",
+      "png_sha256": "a3772ed9acb71f88a5961a261b6acef0a5206aec86b106cb77a767c1c3990540",
+      "decoded_rgba_sha256": "1c91a14cb683a32e2f40ae38ec9d6eab013c66c4e54e9b336cd9a77c288968f1"
+    },
+    {
+      "sequence": 3,
+      "frame_index": 15,
+      "png_file": "s003_f015.png",
+      "metadata_file": "s003_f015.json",
+      "png_sha256": "a5c633155547ca823a3850eba4e8b393244d710e73dfda3f8f9d0d5105f4a551",
+      "decoded_rgba_sha256": "4b1e907e3e14bb32c136a74d9ace2665652885520c77cff184fdae8877a9a3eb"
+    },
+    {
+      "sequence": 4,
+      "frame_index": 105,
+      "png_file": "s004_f105.png",
+      "metadata_file": "s004_f105.json",
+      "png_sha256": "a5c633155547ca823a3850eba4e8b393244d710e73dfda3f8f9d0d5105f4a551",
+      "decoded_rgba_sha256": "4b1e907e3e14bb32c136a74d9ace2665652885520c77cff184fdae8877a9a3eb"
+    },
+    {
+      "sequence": 5,
+      "frame_index": 30,
+      "png_file": "s005_f030.png",
+      "metadata_file": "s005_f030.json",
+      "png_sha256": "bf009b41a6bc0c0e51fcd22ba4291b058fcea38bb2cce4340322c03d16d6dcaa",
+      "decoded_rgba_sha256": "33f880050c8d243e98f40d159ad3470582446352d7a6ac01c8d04680f92710ba"
+    },
+    {
+      "sequence": 6,
+      "frame_index": 90,
+      "png_file": "s006_f090.png",
+      "metadata_file": "s006_f090.json",
+      "png_sha256": "bf009b41a6bc0c0e51fcd22ba4291b058fcea38bb2cce4340322c03d16d6dcaa",
+      "decoded_rgba_sha256": "33f880050c8d243e98f40d159ad3470582446352d7a6ac01c8d04680f92710ba"
+    },
+    {
+      "sequence": 7,
+      "frame_index": 45,
+      "png_file": "s007_f045.png",
+      "metadata_file": "s007_f045.json",
+      "png_sha256": "59f958c593c87548bbad38951f7e5d1a410af17b49ea2169fbf1dacc65c17c88",
+      "decoded_rgba_sha256": "02700020e76b7fe3fd36587b6634eb43887422744e4e4d52c448aa9df97f47dd"
+    },
+    {
+      "sequence": 8,
+      "frame_index": 75,
+      "png_file": "s008_f075.png",
+      "metadata_file": "s008_f075.json",
+      "png_sha256": "59f958c593c87548bbad38951f7e5d1a410af17b49ea2169fbf1dacc65c17c88",
+      "decoded_rgba_sha256": "02700020e76b7fe3fd36587b6634eb43887422744e4e4d52c448aa9df97f47dd"
+    },
+    {
+      "sequence": 9,
+      "frame_index": 0,
+      "png_file": "s009_f000.png",
+      "metadata_file": "s009_f000.json",
+      "png_sha256": "1af9c457b0e3ac5e89e56f73b5415768eb77d119520dc3a9bf1167fc136f01d3",
+      "decoded_rgba_sha256": "436b5f3f6fdf639da3586250c21ee3184fab44219ffaddac0c007bf64ce107d2"
+    },
+    {
+      "sequence": 10,
+      "frame_index": 60,
+      "png_file": "s010_f060.png",
+      "metadata_file": "s010_f060.json",
+      "png_sha256": "a3772ed9acb71f88a5961a261b6acef0a5206aec86b106cb77a767c1c3990540",
+      "decoded_rgba_sha256": "1c91a14cb683a32e2f40ae38ec9d6eab013c66c4e54e9b336cd9a77c288968f1"
+    },
+    {
+      "sequence": 11,
+      "frame_index": 120,
+      "png_file": "s011_f120.png",
+      "metadata_file": "s011_f120.json",
+      "png_sha256": "1af9c457b0e3ac5e89e56f73b5415768eb77d119520dc3a9bf1167fc136f01d3",
+      "decoded_rgba_sha256": "436b5f3f6fdf639da3586250c21ee3184fab44219ffaddac0c007bf64ce107d2"
+    }
+  ],
+  "device": {
+    "unityVersion": "6000.6.5f1",
+    "platform": "WindowsPlayer",
+    "operatingSystem": "Windows 10  (10.0.19045) 64bit",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "graphicsVersion": "Direct3D 11.0 [level 11.1]",
+    "graphicsAPI": "Direct3D11",
+    "focusedAtStart": true,
+    "runInBackground": true
+  }
+}

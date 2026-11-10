@@ -2,7 +2,7 @@
 
 **Project:** Investigating the Performance–Quality Trade-off of Shadow Map Filtering in Unity
 
-A Unity 6.6 URP project for investigating PCF shadow filtering. The current working tree contains a controlled scene and a native Hard/Low/Medium/High capture workflow.
+A Unity 6.6 URP project for investigating PCF shadow filtering. The current working tree contains controlled static and occluder-motion scenes, native preset capture and a frame-timing availability workflow.
 
 ## Current status
 
@@ -12,7 +12,9 @@ On **10 November 2026**, the first static native-preset suites were reproduced i
 
 Also on **10 November 2026**, a standalone native High timing smoke collected three sets of 1,000 valid unique CPU/GPU frame timings. Approximately 10% of measurement polls returned GPU=0 and were retained but excluded. See [frame timing availability](Documentation/frame-timing-smoke.md) for raw-data locations, commands and limitations.
 
-The settings remain initial development values. Formal timing reliability, motion replay, full-evaluation equivalence and adaptive sampling remain future work. There are no performance improvement results yet. Task C is in progress; M2 has not been passed.
+The first occluder-only replay was also implemented on **10 November 2026**. Two forward runs, a reverse run and a seek run exported 375 frame-indexed images and state records. See [occluder replay](Documentation/occluder-replay.md) for the trajectory, commands, verification and inspection preview.
+
+The settings remain initial development values. Formal timing reliability, camera/light motion, dynamic timing association, full-evaluation equivalence and adaptive sampling remain future work. There are no performance improvement results yet. Tasks C and D are in progress; M2 has not been passed.
 
 ## Requirements and opening the project
 
@@ -73,5 +75,11 @@ The scene contains a receiving plane, a block, a thin wall and three posts of wi
 - `Measurements/FrameTiming/`: raw polling observations, configuration and retained invalid timing returns.
 - `Documentation/frame-timing-smoke.md`: timing commands and availability results with limitations.
 - `Tools/analysis/analyse_timing.py`: independent validation and summary calculation from the recorded raw timing observations.
+- `Assets/Scenes/PCF_OccluderReplay.unity`: separate replay scene; enter Play to preview the moving block.
+- `Assets/Experiments/Runtime/OccluderReplayRunner.cs`: frame-indexed motion, state checks and diagnostic export.
+- `Captures/OccluderReplay/`: original replay PNG/JSON/CSV records and derived inspection previews.
+- `Documentation/occluder-replay.md`: replay protocol and current validation results.
+- `Documentation/occluder-replay-provenance.json`: exact source/build input hashes and raw-data linkage.
+- `Tools/analysis/analyse_replay.py`: independent replay-state and image verification.
 
 Unity package source remains in the installed packages. The repository preserves package references, lock data and source hashes; it does not vendor or modify URP. Cache, logs, user settings, generated IDE projects and build outputs are excluded by the Unity ignore rules.

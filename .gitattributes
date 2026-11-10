@@ -76,6 +76,8 @@ Packages/packages-lock.json linguist-generated
 
 # Preserve experimental evidence byte-for-byte, including its original newlines.
 Captures/NativeBaselines/**/*.json -text whitespace=cr-at-eol
+Captures/OccluderReplay/**/*.json -text whitespace=cr-at-eol
+Captures/OccluderReplay/**/*.csv -text whitespace=cr-at-eol
 Measurements/FrameTiming/**/*.csv -text whitespace=cr-at-eol
 Measurements/FrameTiming/**/*.json -text whitespace=cr-at-eol
 

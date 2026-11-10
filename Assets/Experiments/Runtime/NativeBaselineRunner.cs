@@ -62,6 +62,8 @@ namespace TYP.Experiments
                     else if (arg.StartsWith("--pcf-output=", StringComparison.Ordinal))
                         output = arg.Substring("--pcf-output=".Length);
                 }
+                if (captureSuite && Array.IndexOf(Environment.GetCommandLineArgs(), "--pcf-occluder-replay") >= 0)
+                    throw new InvalidOperationException("Native capture and occluder replay must run separately.");
                 ResolveReferences();
                 ApplyPreset(selected);
                 if (captureSuite)

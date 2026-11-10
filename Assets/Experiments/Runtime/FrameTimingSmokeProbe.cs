@@ -48,6 +48,8 @@ namespace TYP.Experiments
             report = new Report { startedUtc = DateTime.UtcNow.ToString("o"), applicationStartupRealtimeSeconds = Time.realtimeSinceStartupAsDouble };
             try
             {
+                if (Array.IndexOf(args, "--pcf-occluder-replay") >= 0)
+                    throw new InvalidOperationException("Timing smoke and occluder replay must run separately.");
                 foreach (string arg in args)
                 {
                     if (arg.StartsWith("--pcf-timing-output=", StringComparison.Ordinal))

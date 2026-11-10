@@ -1,0 +1,77 @@
+{
+    "sequence": 4,
+    "frameIndex": 4,
+    "appliedUnityFrame": 38,
+    "captureFrame": 40,
+    "captureFrameAfterReadback": 40,
+    "appliedIndexBeforeCapture": 4,
+    "appliedIndexAfterCapture": 4,
+    "width": 1920,
+    "height": 1080,
+    "simulationTimeSeconds": 0.06666666666666667,
+    "captureUtc": "2026-11-10T06:12:58.6563575Z",
+    "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+    "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+    "pngSha256": "b88f2ebdc36bb0d146374464bf2fb12e48943ee393a8c8fd91668ce92858b3f2",
+    "pngFile": "s004_f004.png",
+    "metadataFile": "s004_f004.json",
+    "error": "",
+    "expectedPosition": {
+        "x": -3.0833332538604736,
+        "y": 1.0,
+        "z": -1.0
+    },
+    "actualPosition": {
+        "x": -3.0833332538604736,
+        "y": 1.0,
+        "z": -1.0
+    },
+    "expectedScale": {
+        "x": 1.5,
+        "y": 2.0,
+        "z": 1.5
+    },
+    "actualScale": {
+        "x": 1.5,
+        "y": 2.0,
+        "z": 1.5
+    },
+    "expectedRotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
+    },
+    "actualRotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
+    },
+    "staticControlsUnchanged": true,
+    "success": true,
+    "shaderDiagnostics": {
+        "mainLightShadowParams": {
+            "x": 1.0,
+            "y": 3.0,
+            "z": 0.0019616957288235426,
+            "w": -3.9042391777038574
+        },
+        "mainLightShadowmapSize": {
+            "x": 0.00048828125,
+            "y": 0.00048828125,
+            "z": 2048.0,
+            "w": 2048.0
+        },
+        "shadowBiasGlobalDiagnostic": {
+            "x": -0.014669103547930717,
+            "y": -0.07334551215171814,
+            "z": 1.0,
+            "w": 0.0
+        },
+        "mainLightShadows": true,
+        "softShadows": true,
+        "softHigh": false,
+        "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+    }
+}

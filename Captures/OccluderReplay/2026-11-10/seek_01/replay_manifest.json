@@ -1,0 +1,1451 @@
+{
+    "startedUtc": "2026-11-10T06:13:21.3060632Z",
+    "endedUtc": "2026-11-10T06:13:22.2643658Z",
+    "state": "completed",
+    "error": "",
+    "requestedOrderName": "seek",
+    "movingObjectPath": "Geometry/Block",
+    "fixedControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+    "requestedOrder": [
+        120,
+        0,
+        60,
+        15,
+        105,
+        30,
+        90,
+        45,
+        75,
+        0,
+        60,
+        120
+    ],
+    "logicalHz": 60,
+    "firstFrame": 0,
+    "lastFrame": 120,
+    "endOfFrameWaitsPerIndex": 2,
+    "startupSettlingFrames": 30,
+    "pathFormula": "x = centre.x - amplitude + 2*amplitude*(index <= 60 ? index/60 : (120-index)/60); y,z = centre.y,z",
+    "classification": "Diagnostic frame-indexed occluder replay, not a performance experiment. Logical 60 Hz defines simulation time, not measured rendering FPS. Native High is an implementation reference, not ground truth. Preview remains stopped after capture and the occluder initial transform is restored.",
+    "pathCentre": {
+        "x": -2.0,
+        "y": 1.0,
+        "z": -1.0
+    },
+    "initialPosition": {
+        "x": -2.0,
+        "y": 1.0,
+        "z": -1.0
+    },
+    "initialScale": {
+        "x": 1.5,
+        "y": 2.0,
+        "z": 1.5
+    },
+    "initialRotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
+    },
+    "amplitude": 1.25,
+    "initialTransformRestored": true,
+    "previewAfterCapture": false,
+    "fixedControls": {
+        "scenePath": "Assets/Scenes/PCF_OccluderReplay.unity",
+        "cameraPath": "Main Camera",
+        "lightPath": "Main Directional Light",
+        "pipelineName": "PCF_Baseline_URP",
+        "lightMode": "Soft",
+        "perLightQuality": "High",
+        "lightType": "Directional",
+        "cameraAntialiasing": "None",
+        "cameraClearFlags": "SolidColor",
+        "activeColorSpace": "Linear",
+        "ambientMode": "Flat",
+        "renderScale": 1.0,
+        "shadowDistance": 50.0,
+        "depthBiasInput": 0.10000000149011612,
+        "normalBiasInput": 0.5,
+        "lightDepthBiasInput": 0.05000000074505806,
+        "lightNormalBiasInput": 0.4000000059604645,
+        "lightStrength": 1.0,
+        "lightIntensity": 1.0,
+        "cameraFOV": 45.0,
+        "cameraNear": 0.10000000149011612,
+        "cameraFar": 100.0,
+        "msaaSamples": 1,
+        "shadowResolution": 2048,
+        "cascades": 1,
+        "screenWidth": 1920,
+        "screenHeight": 1080,
+        "cameraPixelWidth": 1920,
+        "cameraPixelHeight": 1080,
+        "vSyncCount": 0,
+        "targetFrameRate": -1,
+        "cameraCullingMask": -1,
+        "pipelineHDR": false,
+        "lightUsesPipelineBias": true,
+        "cameraHDR": false,
+        "cameraMSAA": false,
+        "cameraDynamicResolution": false,
+        "cameraPostProcessing": false,
+        "cameraOcclusionCulling": false,
+        "fog": false,
+        "lightColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+        },
+        "cameraBackground": {
+            "r": 0.12999999523162842,
+            "g": 0.15000000596046448,
+            "b": 0.18000000715255737,
+            "a": 1.0
+        },
+        "ambientLight": {
+            "r": 0.11999999731779099,
+            "g": 0.11999999731779099,
+            "b": 0.11999999731779099,
+            "a": 1.0
+        },
+        "cameraProjection": {
+            "e00": 1.3579950332641602,
+            "e01": 0.0,
+            "e02": 0.0,
+            "e03": 0.0,
+            "e10": 0.0,
+            "e11": 2.4142134189605713,
+            "e12": 0.0,
+            "e13": 0.0,
+            "e20": 0.0,
+            "e21": 0.0,
+            "e22": -1.0020020008087158,
+            "e23": -0.20020020008087158,
+            "e30": 0.0,
+            "e31": 0.0,
+            "e32": -1.0,
+            "e33": 0.0
+        },
+        "staticTransforms": [
+            {
+                "path": "Experiment Settings",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "localScale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "activeSelf": true,
+                "activeInHierarchy": true,
+                "isStatic": false
+            },
+            {
+                "path": "Geometry",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "localScale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "activeSelf": true,
+                "activeInHierarchy": true,
+                "isStatic": false
+            },
+            {
+                "path": "Geometry/Receiver_Plane",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "localScale": {
+                    "x": 2.0,
+                    "y": 1.0,
+                    "z": 2.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "activeSelf": true,
+                "activeInHierarchy": true,
+                "isStatic": false
+            },
+            {
+                "path": "Geometry/Thin_Post_008",
+                "position": {
+                    "x": -0.699999988079071,
+                    "y": 1.0,
+                    "z": 2.0
+                },
+                "localScale": {
+                    "x": 0.07999999821186066,
+                    "y": 2.0,
+                    "z": 0.07999999821186066
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "activeSelf": true,
+                "activeInHierarchy": true,
+                "isStatic": false
+            },
+            {
+                "path": "Geometry/Thin_Post_015",
+                "position": {
+                    "x": 0.10000000149011612,
+                    "y": 1.0,
+                    "z": 2.0
+                },
+                "localScale": {
+                    "x": 0.15000000596046448,
+                    "y": 2.0,
+                    "z": 0.15000000596046448
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "activeSelf": true,
+                "activeInHierarchy": true,
+                "isStatic": false
+            },
+            {
+                "path": "Geometry/Thin_Post_030",
+                "position": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 2.0
+                },
+                "localScale": {
+                    "x": 0.30000001192092896,
+                    "y": 2.0,
+                    "z": 0.30000001192092896
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "activeSelf": true,
+                "activeInHierarchy": true,
+                "isStatic": false
+            },
+            {
+                "path": "Geometry/Thin_Wall",
+                "position": {
+                    "x": 2.5,
+                    "y": 1.0,
+                    "z": 0.5
+                },
+                "localScale": {
+                    "x": 0.20000000298023224,
+                    "y": 2.0,
+                    "z": 3.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "activeSelf": true,
+                "activeInHierarchy": true,
+                "isStatic": false
+            },
+            {
+                "path": "Main Camera",
+                "position": {
+                    "x": 8.0,
+                    "y": 7.0,
+                    "z": -11.0
+                },
+                "localScale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                },
+                "rotation": {
+                    "x": 0.1983451396226883,
+                    "y": -0.28896158933639526,
+                    "z": 0.0613274946808815,
+                    "w": 0.9345583915710449
+                },
+                "activeSelf": true,
+                "activeInHierarchy": true,
+                "isStatic": false
+            },
+            {
+                "path": "Main Directional Light",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "localScale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                },
+                "rotation": {
+                    "x": 0.11507514119148254,
+                    "y": 0.8811195492744446,
+                    "z": -0.36497169733047485,
+                    "w": 0.27781593799591064
+                },
+                "activeSelf": true,
+                "activeInHierarchy": true,
+                "isStatic": false
+            }
+        ],
+        "renderers": [
+            {
+                "path": "Geometry/Block",
+                "type": "MeshRenderer",
+                "shadowCastingMode": "On",
+                "enabled": true,
+                "receiveShadows": true,
+                "renderingLayerMask": 1,
+                "materials": [
+                    {
+                        "name": "PCF_Occluders",
+                        "shader": "Universal Render Pipeline/Lit",
+                        "hasBaseColor": true,
+                        "baseColor": {
+                            "r": 0.44999998807907104,
+                            "g": 0.47999995946884155,
+                            "b": 0.5199999809265137,
+                            "a": 1.0
+                        },
+                        "renderQueue": 2000
+                    }
+                ]
+            },
+            {
+                "path": "Geometry/Receiver_Plane",
+                "type": "MeshRenderer",
+                "shadowCastingMode": "On",
+                "enabled": true,
+                "receiveShadows": true,
+                "renderingLayerMask": 1,
+                "materials": [
+                    {
+                        "name": "PCF_Ground",
+                        "shader": "Universal Render Pipeline/Lit",
+                        "hasBaseColor": true,
+                        "baseColor": {
+                            "r": 0.699999988079071,
+                            "g": 0.699999988079071,
+                            "b": 0.699999988079071,
+                            "a": 1.0
+                        },
+                        "renderQueue": 2000
+                    }
+                ]
+            },
+            {
+                "path": "Geometry/Thin_Post_008",
+                "type": "MeshRenderer",
+                "shadowCastingMode": "On",
+                "enabled": true,
+                "receiveShadows": true,
+                "renderingLayerMask": 1,
+                "materials": [
+                    {
+                        "name": "PCF_Occluders",
+                        "shader": "Universal Render Pipeline/Lit",
+                        "hasBaseColor": true,
+                        "baseColor": {
+                            "r": 0.44999998807907104,
+                            "g": 0.47999995946884155,
+                            "b": 0.5199999809265137,
+                            "a": 1.0
+                        },
+                        "renderQueue": 2000
+                    }
+                ]
+            },
+            {
+                "path": "Geometry/Thin_Post_015",
+                "type": "MeshRenderer",
+                "shadowCastingMode": "On",
+                "enabled": true,
+                "receiveShadows": true,
+                "renderingLayerMask": 1,
+                "materials": [
+                    {
+                        "name": "PCF_Occluders",
+                        "shader": "Universal Render Pipeline/Lit",
+                        "hasBaseColor": true,
+                        "baseColor": {
+                            "r": 0.44999998807907104,
+                            "g": 0.47999995946884155,
+                            "b": 0.5199999809265137,
+                            "a": 1.0
+                        },
+                        "renderQueue": 2000
+                    }
+                ]
+            },
+            {
+                "path": "Geometry/Thin_Post_030",
+                "type": "MeshRenderer",
+                "shadowCastingMode": "On",
+                "enabled": true,
+                "receiveShadows": true,
+                "renderingLayerMask": 1,
+                "materials": [
+                    {
+                        "name": "PCF_Occluders",
+                        "shader": "Universal Render Pipeline/Lit",
+                        "hasBaseColor": true,
+                        "baseColor": {
+                            "r": 0.44999998807907104,
+                            "g": 0.47999995946884155,
+                            "b": 0.5199999809265137,
+                            "a": 1.0
+                        },
+                        "renderQueue": 2000
+                    }
+                ]
+            },
+            {
+                "path": "Geometry/Thin_Wall",
+                "type": "MeshRenderer",
+                "shadowCastingMode": "On",
+                "enabled": true,
+                "receiveShadows": true,
+                "renderingLayerMask": 1,
+                "materials": [
+                    {
+                        "name": "PCF_Occluders",
+                        "shader": "Universal Render Pipeline/Lit",
+                        "hasBaseColor": true,
+                        "baseColor": {
+                            "r": 0.44999998807907104,
+                            "g": 0.47999995946884155,
+                            "b": 0.5199999809265137,
+                            "a": 1.0
+                        },
+                        "renderQueue": 2000
+                    }
+                ]
+            }
+        ]
+    },
+    "device": {
+        "unityVersion": "6000.6.5f1",
+        "platform": "WindowsPlayer",
+        "operatingSystem": "Windows 10  (10.0.19045) 64bit",
+        "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+        "gpu": "NVIDIA GeForce RTX 4070",
+        "graphicsVersion": "Direct3D 11.0 [level 11.1]",
+        "graphicsAPI": "Direct3D11",
+        "focusedAtStart": true,
+        "runInBackground": true
+    },
+    "startupShaderDiagnostics": {
+        "mainLightShadowParams": {
+            "x": 1.0,
+            "y": 3.0,
+            "z": 0.0019616957288235426,
+            "w": -3.9042391777038574
+        },
+        "mainLightShadowmapSize": {
+            "x": 0.00048828125,
+            "y": 0.00048828125,
+            "z": 2048.0,
+            "w": 2048.0
+        },
+        "shadowBiasGlobalDiagnostic": {
+            "x": -0.014669103547930717,
+            "y": -0.07334551215171814,
+            "z": 1.0,
+            "w": 0.0
+        },
+        "mainLightShadows": true,
+        "softShadows": true,
+        "softHigh": false,
+        "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+    },
+    "finalShaderDiagnostics": {
+        "mainLightShadowParams": {
+            "x": 1.0,
+            "y": 3.0,
+            "z": 0.0019616957288235426,
+            "w": -3.9042391777038574
+        },
+        "mainLightShadowmapSize": {
+            "x": 0.00048828125,
+            "y": 0.00048828125,
+            "z": 2048.0,
+            "w": 2048.0
+        },
+        "shadowBiasGlobalDiagnostic": {
+            "x": -0.014669103547930717,
+            "y": -0.07334551215171814,
+            "z": 1.0,
+            "w": 0.0
+        },
+        "mainLightShadows": true,
+        "softShadows": true,
+        "softHigh": false,
+        "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+    },
+    "frames": [
+        {
+            "sequence": 0,
+            "frameIndex": 120,
+            "appliedUnityFrame": 31,
+            "captureFrame": 32,
+            "captureFrameAfterReadback": 32,
+            "appliedIndexBeforeCapture": 120,
+            "appliedIndexAfterCapture": 120,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 2.0,
+            "captureUtc": "2026-11-10T06:13:21.5625111Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "1af9c457b0e3ac5e89e56f73b5415768eb77d119520dc3a9bf1167fc136f01d3",
+            "pngFile": "s000_f120.png",
+            "metadataFile": "s000_f120.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -3.25,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -3.25,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 1,
+            "frameIndex": 0,
+            "appliedUnityFrame": 32,
+            "captureFrame": 34,
+            "captureFrameAfterReadback": 34,
+            "appliedIndexBeforeCapture": 0,
+            "appliedIndexAfterCapture": 0,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 0.0,
+            "captureUtc": "2026-11-10T06:13:21.6318421Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "1af9c457b0e3ac5e89e56f73b5415768eb77d119520dc3a9bf1167fc136f01d3",
+            "pngFile": "s001_f000.png",
+            "metadataFile": "s001_f000.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -3.25,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -3.25,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 2,
+            "frameIndex": 60,
+            "appliedUnityFrame": 34,
+            "captureFrame": 36,
+            "captureFrameAfterReadback": 36,
+            "appliedIndexBeforeCapture": 60,
+            "appliedIndexAfterCapture": 60,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 1.0,
+            "captureUtc": "2026-11-10T06:13:21.6863091Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "a3772ed9acb71f88a5961a261b6acef0a5206aec86b106cb77a767c1c3990540",
+            "pngFile": "s002_f060.png",
+            "metadataFile": "s002_f060.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -0.75,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -0.75,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 3,
+            "frameIndex": 15,
+            "appliedUnityFrame": 36,
+            "captureFrame": 38,
+            "captureFrameAfterReadback": 38,
+            "appliedIndexBeforeCapture": 15,
+            "appliedIndexAfterCapture": 15,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 0.25,
+            "captureUtc": "2026-11-10T06:13:21.7472412Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "a5c633155547ca823a3850eba4e8b393244d710e73dfda3f8f9d0d5105f4a551",
+            "pngFile": "s003_f015.png",
+            "metadataFile": "s003_f015.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -2.625,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -2.625,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 4,
+            "frameIndex": 105,
+            "appliedUnityFrame": 38,
+            "captureFrame": 40,
+            "captureFrameAfterReadback": 40,
+            "appliedIndexBeforeCapture": 105,
+            "appliedIndexAfterCapture": 105,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 1.75,
+            "captureUtc": "2026-11-10T06:13:21.8068227Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "a5c633155547ca823a3850eba4e8b393244d710e73dfda3f8f9d0d5105f4a551",
+            "pngFile": "s004_f105.png",
+            "metadataFile": "s004_f105.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -2.625,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -2.625,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 5,
+            "frameIndex": 30,
+            "appliedUnityFrame": 40,
+            "captureFrame": 42,
+            "captureFrameAfterReadback": 42,
+            "appliedIndexBeforeCapture": 30,
+            "appliedIndexAfterCapture": 30,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 0.5,
+            "captureUtc": "2026-11-10T06:13:21.8644905Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "bf009b41a6bc0c0e51fcd22ba4291b058fcea38bb2cce4340322c03d16d6dcaa",
+            "pngFile": "s005_f030.png",
+            "metadataFile": "s005_f030.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -2.0,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -2.0,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 6,
+            "frameIndex": 90,
+            "appliedUnityFrame": 42,
+            "captureFrame": 44,
+            "captureFrameAfterReadback": 44,
+            "appliedIndexBeforeCapture": 90,
+            "appliedIndexAfterCapture": 90,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 1.5,
+            "captureUtc": "2026-11-10T06:13:21.9239183Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "bf009b41a6bc0c0e51fcd22ba4291b058fcea38bb2cce4340322c03d16d6dcaa",
+            "pngFile": "s006_f090.png",
+            "metadataFile": "s006_f090.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -2.0,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -2.0,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 7,
+            "frameIndex": 45,
+            "appliedUnityFrame": 44,
+            "captureFrame": 46,
+            "captureFrameAfterReadback": 46,
+            "appliedIndexBeforeCapture": 45,
+            "appliedIndexAfterCapture": 45,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 0.75,
+            "captureUtc": "2026-11-10T06:13:21.9796631Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "59f958c593c87548bbad38951f7e5d1a410af17b49ea2169fbf1dacc65c17c88",
+            "pngFile": "s007_f045.png",
+            "metadataFile": "s007_f045.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -1.375,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -1.375,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 8,
+            "frameIndex": 75,
+            "appliedUnityFrame": 46,
+            "captureFrame": 48,
+            "captureFrameAfterReadback": 48,
+            "appliedIndexBeforeCapture": 75,
+            "appliedIndexAfterCapture": 75,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 1.25,
+            "captureUtc": "2026-11-10T06:13:22.0356178Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "59f958c593c87548bbad38951f7e5d1a410af17b49ea2169fbf1dacc65c17c88",
+            "pngFile": "s008_f075.png",
+            "metadataFile": "s008_f075.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -1.375,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -1.375,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 9,
+            "frameIndex": 0,
+            "appliedUnityFrame": 48,
+            "captureFrame": 50,
+            "captureFrameAfterReadback": 50,
+            "appliedIndexBeforeCapture": 0,
+            "appliedIndexAfterCapture": 0,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 0.0,
+            "captureUtc": "2026-11-10T06:13:22.0957062Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "1af9c457b0e3ac5e89e56f73b5415768eb77d119520dc3a9bf1167fc136f01d3",
+            "pngFile": "s009_f000.png",
+            "metadataFile": "s009_f000.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -3.25,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -3.25,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 10,
+            "frameIndex": 60,
+            "appliedUnityFrame": 50,
+            "captureFrame": 52,
+            "captureFrameAfterReadback": 52,
+            "appliedIndexBeforeCapture": 60,
+            "appliedIndexAfterCapture": 60,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 1.0,
+            "captureUtc": "2026-11-10T06:13:22.1503527Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "a3772ed9acb71f88a5961a261b6acef0a5206aec86b106cb77a767c1c3990540",
+            "pngFile": "s010_f060.png",
+            "metadataFile": "s010_f060.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -0.75,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -0.75,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        },
+        {
+            "sequence": 11,
+            "frameIndex": 120,
+            "appliedUnityFrame": 52,
+            "captureFrame": 54,
+            "captureFrameAfterReadback": 54,
+            "appliedIndexBeforeCapture": 120,
+            "appliedIndexAfterCapture": 120,
+            "width": 1920,
+            "height": 1080,
+            "simulationTimeSeconds": 2.0,
+            "captureUtc": "2026-11-10T06:13:22.2080590Z",
+            "staticControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "postCaptureControlsHash": "14f3886e31b5550ffb4df619bad7bb806c90f7d14854b7b82ad93b8307e84d34",
+            "pngSha256": "1af9c457b0e3ac5e89e56f73b5415768eb77d119520dc3a9bf1167fc136f01d3",
+            "pngFile": "s011_f120.png",
+            "metadataFile": "s011_f120.json",
+            "error": "",
+            "expectedPosition": {
+                "x": -3.25,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "actualPosition": {
+                "x": -3.25,
+                "y": 1.0,
+                "z": -1.0
+            },
+            "expectedScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "actualScale": {
+                "x": 1.5,
+                "y": 2.0,
+                "z": 1.5
+            },
+            "expectedRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "actualRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "staticControlsUnchanged": true,
+            "success": true,
+            "shaderDiagnostics": {
+                "mainLightShadowParams": {
+                    "x": 1.0,
+                    "y": 3.0,
+                    "z": 0.0019616957288235426,
+                    "w": -3.9042391777038574
+                },
+                "mainLightShadowmapSize": {
+                    "x": 0.00048828125,
+                    "y": 0.00048828125,
+                    "z": 2048.0,
+                    "w": 2048.0
+                },
+                "shadowBiasGlobalDiagnostic": {
+                    "x": -0.014669103547930717,
+                    "y": -0.07334551215171814,
+                    "z": 1.0,
+                    "w": 0.0
+                },
+                "mainLightShadows": true,
+                "softShadows": true,
+                "softHigh": false,
+                "caveat": "Post-render shader globals are diagnostics; _ShadowBias is not independently verified per-draw effective caster bias."
+            }
+        }
+    ]
+}

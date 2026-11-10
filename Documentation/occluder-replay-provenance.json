@@ -1,0 +1,342 @@
+{
+  "date": "2026-11-10",
+  "classification": "Executed occluder-only state/image replay validation; not benchmark, temporal-quality result or M2 completion",
+  "parentCommit": "e8e03e14bab34a16c70f38dbc6200dc1850750d2",
+  "sourceWasDirty": true,
+  "sourceIdentity": "Uncommitted Task D runtime and scene are identified by exact build-input SHA256 values below. The parent commit alone is insufficient.",
+  "unity": "6000.6.5f1 (3ff58d469c8a)",
+  "urp": "17.6.0",
+  "core": "17.6.0",
+  "build": {
+    "success": true,
+    "message": "Build Succeeded.",
+    "data": {
+      "job_id": "build-825410fe7f",
+      "result": "succeeded",
+      "platform": "StandaloneWindows64",
+      "output_path": "F:/WorkingFiles/TYP/TYP/Builds/TaskD_2026-11-10/OccluderReplay.exe",
+      "started_at": "2026-11-10T06:11:55.5635223Z",
+      "duration_seconds": 25.523877799999998,
+      "completed_at": "2026-11-10T06:12:21.0874001Z",
+      "total_size_mb": 96.32,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "buildInputs": [
+    {
+      "path": "Assets/Experiments/Materials.meta",
+      "sha256": "C86FAD359275AAE91FDD227FAE282CA9998494C47D8574EF9D4CB25C2605D4A7"
+    },
+    {
+      "path": "Assets/Experiments/Materials/PCF_Ground.mat",
+      "sha256": "CEFD311C3C8E66B3A96CE68AD8F9732735FEE933B4024C90DEC7922C659BE115"
+    },
+    {
+      "path": "Assets/Experiments/Materials/PCF_Ground.mat.meta",
+      "sha256": "BCBC31EDC660E581F809834A2ECD8089E9FF9B8EE97108333BAB3BFC051781BD"
+    },
+    {
+      "path": "Assets/Experiments/Materials/PCF_Occluders.mat",
+      "sha256": "05991D70B091F0016DEFDF6E9F9BE0DB5F44BA60696B02799C9E51DEE512FB36"
+    },
+    {
+      "path": "Assets/Experiments/Materials/PCF_Occluders.mat.meta",
+      "sha256": "08A923B11B33CF8C33B725D302A0AF6008442BE7BEE6A8E4EF74D5E36DE348CF"
+    },
+    {
+      "path": "Assets/Experiments/Runtime.meta",
+      "sha256": "8A08B9A62B25265FFB7AE47ED70D9D7E126AF1908998CC26195AF13E9EC0A374"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/ExperimentRuntimeSettings.cs",
+      "sha256": "D74A9F97B1F484835274591009C69DB82A99A02C4600FE623F979EB369D9D1C5"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/ExperimentRuntimeSettings.cs.meta",
+      "sha256": "E2CC8BAF8B700CA1FF1F1818F0562EBF1B09C3FCE9023595EA746E8003EFAF87"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/FrameTimingSmokeProbe.cs",
+      "sha256": "4353580FBA18361888B40AABF131EF3B20ACE3B5024AA940723462848154BE22"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/FrameTimingSmokeProbe.cs.meta",
+      "sha256": "66A7755D25FFC23EA7CAAA09C815A79C716E244B39A9A6E27AE6D379ED5C2051"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/NativeBaselineRunner.cs",
+      "sha256": "169301FB9BA17B6C1422F2BEA73B6BB3A6EB23428AD062DDAA903C16196D5D0E"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/NativeBaselineRunner.cs.meta",
+      "sha256": "AEBD88D14F5CC11FA0E00424991FF4BC69EB09D8AB8BE0B8246DA76F92419929"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/OccluderReplayRunner.cs",
+      "sha256": "B1394D905D3388581C4BE17BB7512FCEA152AF30D84CAB28127CD8DD3759BE46"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/OccluderReplayRunner.cs.meta",
+      "sha256": "D75FF4FB72CAC4986223F68D2EBE2604C5009099015434F380765B4BD984F7CE"
+    },
+    {
+      "path": "Assets/Experiments/Settings.meta",
+      "sha256": "4377010A795F4F5E31053D19A1FEDD06BF15DAC36480809F93384FA7B4A6FB4C"
+    },
+    {
+      "path": "Assets/Experiments/Settings/PCF_Baseline_Renderer.asset",
+      "sha256": "092B15C2C0213EF01E4145412BF574A085443333F40FB994235C4BBF4D34114D"
+    },
+    {
+      "path": "Assets/Experiments/Settings/PCF_Baseline_Renderer.asset.meta",
+      "sha256": "75A5D83D0FC9E7B4DD3A89B3E8DA9B3D5A0D97E25B30AF17F9D02F59C601BADA"
+    },
+    {
+      "path": "Assets/Experiments/Settings/PCF_Baseline_URP.asset",
+      "sha256": "CB214D0C526232809D27D2C7E54FE02127F9253184E3397F2E01FD10FBC124AA"
+    },
+    {
+      "path": "Assets/Experiments/Settings/PCF_Baseline_URP.asset.meta",
+      "sha256": "8E88D896921F2C4CF79DBBAFE84301451A187DAAA3355F9EADF9FB05678F8E03"
+    },
+    {
+      "path": "Assets/Scenes/PCF_Baseline.unity",
+      "sha256": "EAE92230AF8BF8AB9C464079BD9C3B05EA6525D65799F7CA61395E0089EB5F72"
+    },
+    {
+      "path": "Assets/Scenes/PCF_OccluderReplay.unity",
+      "sha256": "DC774402EC9DDC52494399BBB71FE6283D54E2D9122AAD3BE39BBD7175CD58A9"
+    },
+    {
+      "path": "Assets/Scenes/PCF_OccluderReplay.unity.meta",
+      "sha256": "F476662AEF62E6F3D9F13E1E2312C73E05369CDB3706D79EA48A76E384FA62BC"
+    },
+    {
+      "path": "Packages/manifest.json",
+      "sha256": "A61BE91A6EF3ADF37A7650881BF8823BB3919ABF3384EBB25BD2AE9ABA2D06A7"
+    },
+    {
+      "path": "Packages/packages-lock.json",
+      "sha256": "7569C41186A9558BDE38EBECF6A56184F0A3A2F6BC24E57A9C0BE209ADF7F4CF"
+    },
+    {
+      "path": "ProjectSettings/EditorBuildSettings.asset",
+      "sha256": "2E2083565A58164258BDA06AD9C89F9D62DFC5AAAE69CFC95803718BCA94749E"
+    },
+    {
+      "path": "ProjectSettings/GraphicsSettings.asset",
+      "sha256": "EB8D8C8DA0439FE7A954B54711E5AA49EE0970EC954972FCAC1343E9A02D4370"
+    },
+    {
+      "path": "ProjectSettings/ProjectSettings.asset",
+      "sha256": "27D2B126CACCC96A9CB3EE810AC757418216FD13B0DD08847886C23B31F73987"
+    },
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "sha256": "B3402F9D37AAB37E8AD7676FFF8D2F3B1333D857D2FADE3FAE888482E59D42AD"
+    },
+    {
+      "path": "ProjectSettings/QualitySettings.asset",
+      "sha256": "1EE9544D5772020E5925C64B46FDABB029B1C3A5FEF7F8F7F310FD81C0FE3BA2"
+    }
+  ],
+  "generatedSettingsRestore": [
+    {
+      "path": "Assets/Experiments/Settings/PCF_Baseline_URP.asset",
+      "before": "CB214D0C526232809D27D2C7E54FE02127F9253184E3397F2E01FD10FBC124AA",
+      "buildGenerated": "30B2E21AE357BD703C2C1B52E1F927BC07D6D6250E8AE2325F3B7B8EB76F8B1C",
+      "restored": "CB214D0C526232809D27D2C7E54FE02127F9253184E3397F2E01FD10FBC124AA",
+      "matchesStart": true
+    },
+    {
+      "path": "Assets/Settings/DefaultVolumeProfile.asset",
+      "before": "6698BFACFAD479ACFD9766D00ABA81AB52527D3B15C8B133D03ED7A2401499D6",
+      "buildGenerated": "463776C51AE49D4FEF980E8FD268081B2F505610D79315003FAAE1ACFF8F4115",
+      "restored": "6698BFACFAD479ACFD9766D00ABA81AB52527D3B15C8B133D03ED7A2401499D6",
+      "matchesStart": true
+    },
+    {
+      "path": "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+      "before": "F074F70005181226C7614CBFB06B064E692C1032763BEF94CCF334D91D0056D0",
+      "buildGenerated": "DE16216797B7D4212762916335811C880FF5E7F6A2BD066882137B949BD13AF1",
+      "restored": "F074F70005181226C7614CBFB06B064E692C1032763BEF94CCF334D91D0056D0",
+      "matchesStart": true
+    },
+    {
+      "path": "ProjectSettings/ProjectSettings.asset",
+      "before": "27D2B126CACCC96A9CB3EE810AC757418216FD13B0DD08847886C23B31F73987",
+      "buildGenerated": "0E235B5A62D0D80DDAF6A71077F31914B2DA204CCC506F6270177A254A0716D2",
+      "restored": "27D2B126CACCC96A9CB3EE810AC757418216FD13B0DD08847886C23B31F73987",
+      "matchesStart": true
+    }
+  ],
+  "sceneFormatting": {
+    "scene": "Assets/Scenes/PCF_OccluderReplay.unity",
+    "builtSha256": "DC774402EC9DDC52494399BBB71FE6283D54E2D9122AAD3BE39BBD7175CD58A9",
+    "currentSha256": "02F73D938FDE69BD0AF7803A7DBE863FE70E4ABF3FA7DE98E606A6C49974038C",
+    "change": "Removed trailing spaces in the newly copied scene after build",
+    "normalizedContentIdentical": true,
+    "baselineSceneUnchanged": true,
+    "editorBuildSettingsUnchanged": true
+  },
+  "nativeSource": [
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "ShaderLibrary/Shadows.hlsl",
+      "sha256": "41DBE5965EF3F3CD6E7FC8F6625081BDDE9B3752571B9FD2B7A8ECA70ABBA4B0",
+      "matchesOriginal": true
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "Runtime/ShadowUtils.cs",
+      "sha256": "04C4CBDA8BD90C2AEC2B2EA10744AD46006CC543F47448C57071506A987279A8",
+      "matchesOriginal": true
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "Runtime/UniversalAdditionalLightData.cs",
+      "sha256": "153B5DC903B054643546309597A84F3A24BAD3BBDA728394004DF06B127B352D",
+      "matchesOriginal": true
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "Runtime/Data/UniversalRenderPipelineAsset.cs",
+      "sha256": "46D4BCE69FEB53CC9AF148D5B554C87BB46FE56B91603C0080D1D7D658CE94AF",
+      "matchesOriginal": true
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "version": "17.6.0",
+      "path": "Runtime/UniversalRenderer.cs",
+      "sha256": "088DD420A0F17734DAE877A9F95D351CACB67203F52B006F7921B010485859D2",
+      "matchesOriginal": true
+    },
+    {
+      "package": "com.unity.render-pipelines.core",
+      "version": "17.6.0",
+      "path": "ShaderLibrary/Shadow/ShadowSamplingTent.hlsl",
+      "sha256": "77E2D61FDCFA891D5164653D6E0B3FD0666987189AA9D67A826209C457144A9B",
+      "matchesOriginal": true
+    }
+  ],
+  "runs": [
+    {
+      "run": "forward_01",
+      "order": "forward",
+      "exitCode": 0,
+      "executableSha256": "001AEEBFB92718F8B49F0C0E0A03E313C54669552B08E952B2FEE3DDD143683A",
+      "arguments": [
+        "-force-d3d11",
+        "-screen-width",
+        "1920",
+        "-screen-height",
+        "1080",
+        "-screen-fullscreen",
+        "0",
+        "-logFile",
+        "F:\\WorkingFiles\\TYP\\experiments\\replay\\2026-11-10\\forward_01.log",
+        "--pcf-preset=High",
+        "--pcf-occluder-replay",
+        "--pcf-replay-output=F:\\WorkingFiles\\TYP\\TYP\\Captures\\OccluderReplay\\2026-11-10\\forward_01",
+        "--pcf-replay-order=forward",
+        "--pcf-replay-quit"
+      ],
+      "manifestSha256": "B3B2543F60781D0638AD8438C08B6C0CC3E90450150D1CABA3CB0B7E6736C0AA"
+    },
+    {
+      "run": "forward_02",
+      "order": "forward",
+      "exitCode": 0,
+      "executableSha256": "001AEEBFB92718F8B49F0C0E0A03E313C54669552B08E952B2FEE3DDD143683A",
+      "arguments": [
+        "-force-d3d11",
+        "-screen-width",
+        "1920",
+        "-screen-height",
+        "1080",
+        "-screen-fullscreen",
+        "0",
+        "-logFile",
+        "F:\\WorkingFiles\\TYP\\experiments\\replay\\2026-11-10\\forward_02.log",
+        "--pcf-preset=High",
+        "--pcf-occluder-replay",
+        "--pcf-replay-output=F:\\WorkingFiles\\TYP\\TYP\\Captures\\OccluderReplay\\2026-11-10\\forward_02",
+        "--pcf-replay-order=forward",
+        "--pcf-replay-quit"
+      ],
+      "manifestSha256": "D91A8320F67678BCF08D3AF604CC053B251FEEE1EC895FF59396D6FA4238A471"
+    },
+    {
+      "run": "reverse_01",
+      "order": "reverse",
+      "exitCode": 0,
+      "executableSha256": "001AEEBFB92718F8B49F0C0E0A03E313C54669552B08E952B2FEE3DDD143683A",
+      "arguments": [
+        "-force-d3d11",
+        "-screen-width",
+        "1920",
+        "-screen-height",
+        "1080",
+        "-screen-fullscreen",
+        "0",
+        "-logFile",
+        "F:\\WorkingFiles\\TYP\\experiments\\replay\\2026-11-10\\reverse_01.log",
+        "--pcf-preset=High",
+        "--pcf-occluder-replay",
+        "--pcf-replay-output=F:\\WorkingFiles\\TYP\\TYP\\Captures\\OccluderReplay\\2026-11-10\\reverse_01",
+        "--pcf-replay-order=reverse",
+        "--pcf-replay-quit"
+      ],
+      "manifestSha256": "4B2F49CF3549FBFE9B0BCEB73E007AD5D2F9FEF3813EDC569E37FC2B9FF07AD9"
+    },
+    {
+      "run": "seek_01",
+      "order": "seek",
+      "exitCode": 0,
+      "executableSha256": "001AEEBFB92718F8B49F0C0E0A03E313C54669552B08E952B2FEE3DDD143683A",
+      "arguments": [
+        "-force-d3d11",
+        "-screen-width",
+        "1920",
+        "-screen-height",
+        "1080",
+        "-screen-fullscreen",
+        "0",
+        "-logFile",
+        "F:\\WorkingFiles\\TYP\\experiments\\replay\\2026-11-10\\seek_01.log",
+        "--pcf-preset=High",
+        "--pcf-occluder-replay",
+        "--pcf-replay-output=F:\\WorkingFiles\\TYP\\TYP\\Captures\\OccluderReplay\\2026-11-10\\seek_01",
+        "--pcf-replay-order=seek",
+        "--pcf-replay-quit"
+      ],
+      "manifestSha256": "46E8DECC0A518830A28BF7606FA6B39C43C2E3CE70E9073EC88B4893A1CC59D9"
+    }
+  ],
+  "analysisScriptSha256": "C13D6DEBFBE102656AFE20C080AEEAD2E6F9BD5C7A8D4201A5873EF4F9DB0B6B",
+  "rawHashInventorySha256": "31B8C4A0C1534C8C00D09A4D52BFE7B4723A9AAFF1007A3967B11758CCE0CDE0",
+  "verificationSummarySha256": "A7173B2CC7F87FEA5C098C80EA0C3FE25E85CFD88DF956938B386109CC309B92",
+  "staticHighControl": {
+    "replayFrame": 30,
+    "nativeHighPath": "Captures/NativeBaselines/2026-11-10/player_static_02/High.png",
+    "samePngBytes": true
+  },
+  "notes": [
+    "Build outputs and Player logs remain local under ignored Builds and workspace experiment directories. They are not included in a clone.",
+    "Source/build snapshots and setup/failure history also remain in the workspace experiments/replay directory.",
+    "Derived preview.gif uses every third logical index for inspection; its encoding/playback is not a rendering timing measurement.",
+    "Exact raw CSV/JSON/PNG file hashes are in Captures/OccluderReplay/2026-11-10/analysis/raw_sha256.json"
+  ],
+  "commitPreparation": {
+    "path": "Assets/Scenes/PCF_OccluderReplay.unity.meta",
+    "beforeSha256": "F476662AEF62E6F3D9F13E1E2312C73E05369CDB3706D79EA48A76E384FA62BC",
+    "currentSha256": "AA3C0B6C516DCE2D7F4FED986B7FD2FB862EBA158B3ABB6C4109B458FAA73E3D",
+    "change": "Removed trailing spaces from three empty metadata fields before commit; GUID and all semantic values preserved",
+    "normalizedContentIdentical": true
+  }
+}
