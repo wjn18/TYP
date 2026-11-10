@@ -1,0 +1,235 @@
+{
+  "date": "2026-11-10",
+  "scope": "Fixed-window whole-frame timing reliability pilot, not a formal benchmark",
+  "parentCommit": "dcb4397636e911115c4a300b4e2fcdc3804a50ee",
+  "parentWasPushedAndRemoteVerified": true,
+  "sourceWasDirty": true,
+  "sourceIdentity": "Pilot changes are uncommitted after dcb4397; exact critical input hashes below identify the build",
+  "unity": "6000.6.5f1 (3ff58d469c8a)",
+  "urp": "17.6.0",
+  "core": "17.6.0",
+  "build": {
+    "success": true,
+    "message": "Build Succeeded.",
+    "data": {
+      "job_id": "build-d26a32cbb8",
+      "result": "succeeded",
+      "platform": "StandaloneWindows64",
+      "output_path": "F:/WorkingFiles/TYP/TYP/Builds/TimingPilot_2026-11-10/TimingPilot.exe",
+      "started_at": "2026-11-10T07:32:04.5041128Z",
+      "duration_seconds": 13.611318599999999,
+      "completed_at": "2026-11-10T07:32:18.1154314Z",
+      "total_size_mb": 96.33,
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "criticalBuildInputs": [
+    {
+      "path": "Assets/Scenes/PCF_Baseline.unity",
+      "sha256": "EAE92230AF8BF8AB9C464079BD9C3B05EA6525D65799F7CA61395E0089EB5F72"
+    },
+    {
+      "path": "Assets/Scenes/PCF_Baseline.unity.meta",
+      "sha256": "B36B7F3A6EE9B165146239DB1011781016EC5335C943F0BD3955F65B8695131E"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/FrameTimingSmokeProbe.cs",
+      "sha256": "CEBE53B13DFD36A3F45593A2F22B98534EABC5E19C5B774616A06D5BA3DDD4E0"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/NativeBaselineRunner.cs",
+      "sha256": "169301FB9BA17B6C1422F2BEA73B6BB3A6EB23428AD062DDAA903C16196D5D0E"
+    },
+    {
+      "path": "Assets/Experiments/Runtime/ExperimentRuntimeSettings.cs",
+      "sha256": "D74A9F97B1F484835274591009C69DB82A99A02C4600FE623F979EB369D9D1C5"
+    },
+    {
+      "path": "Assets/Experiments/Settings/PCF_Baseline_URP.asset",
+      "sha256": "CB214D0C526232809D27D2C7E54FE02127F9253184E3397F2E01FD10FBC124AA"
+    },
+    {
+      "path": "Assets/Experiments/Settings/PCF_Baseline_Renderer.asset",
+      "sha256": "092B15C2C0213EF01E4145412BF574A085443333F40FB994235C4BBF4D34114D"
+    },
+    {
+      "path": "Assets/Settings/DefaultVolumeProfile.asset",
+      "sha256": "6698BFACFAD479ACFD9766D00ABA81AB52527D3B15C8B133D03ED7A2401499D6"
+    },
+    {
+      "path": "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+      "sha256": "F074F70005181226C7614CBFB06B064E692C1032763BEF94CCF334D91D0056D0"
+    },
+    {
+      "path": "ProjectSettings/ProjectSettings.asset",
+      "sha256": "27D2B126CACCC96A9CB3EE810AC757418216FD13B0DD08847886C23B31F73987"
+    },
+    {
+      "path": "ProjectSettings/EditorBuildSettings.asset",
+      "sha256": "2E2083565A58164258BDA06AD9C89F9D62DFC5AAAE69CFC95803718BCA94749E"
+    },
+    {
+      "path": "ProjectSettings/QualitySettings.asset",
+      "sha256": "1EE9544D5772020E5925C64B46FDABB029B1C3A5FEF7F8F7F310FD81C0FE3BA2"
+    },
+    {
+      "path": "ProjectSettings/GraphicsSettings.asset",
+      "sha256": "EB8D8C8DA0439FE7A954B54711E5AA49EE0970EC954972FCAC1343E9A02D4370"
+    },
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "sha256": "B3402F9D37AAB37E8AD7676FFF8D2F3B1333D857D2FADE3FAE888482E59D42AD"
+    },
+    {
+      "path": "Packages/manifest.json",
+      "sha256": "A61BE91A6EF3ADF37A7650881BF8823BB3919ABF3384EBB25BD2AE9ABA2D06A7"
+    },
+    {
+      "path": "Packages/packages-lock.json",
+      "sha256": "7569C41186A9558BDE38EBECF6A56184F0A3A2F6BC24E57A9C0BE209ADF7F4CF"
+    }
+  ],
+  "nativeSourceVerification": [
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "path": "ShaderLibrary/Shadows.hlsl",
+      "sha256": "41DBE5965EF3F3CD6E7FC8F6625081BDDE9B3752571B9FD2B7A8ECA70ABBA4B0",
+      "matchesInitial": true
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "path": "Runtime/ShadowUtils.cs",
+      "sha256": "04C4CBDA8BD90C2AEC2B2EA10744AD46006CC543F47448C57071506A987279A8",
+      "matchesInitial": true
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "path": "Runtime/UniversalAdditionalLightData.cs",
+      "sha256": "153B5DC903B054643546309597A84F3A24BAD3BBDA728394004DF06B127B352D",
+      "matchesInitial": true
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "path": "Runtime/Data/UniversalRenderPipelineAsset.cs",
+      "sha256": "46D4BCE69FEB53CC9AF148D5B554C87BB46FE56B91603C0080D1D7D658CE94AF",
+      "matchesInitial": true
+    },
+    {
+      "package": "com.unity.render-pipelines.universal",
+      "path": "Runtime/UniversalRenderer.cs",
+      "sha256": "088DD420A0F17734DAE877A9F95D351CACB67203F52B006F7921B010485859D2",
+      "matchesInitial": true
+    },
+    {
+      "package": "com.unity.render-pipelines.core",
+      "path": "ShaderLibrary/Shadow/ShadowSamplingTent.hlsl",
+      "sha256": "77E2D61FDCFA891D5164653D6E0B3FD0666987189AA9D67A826209C457144A9B",
+      "matchesInitial": true
+    }
+  ],
+  "generatedSettingsRestore": [
+    {
+      "path": "Assets/Experiments/Settings/PCF_Baseline_URP.asset",
+      "initialSha256": "CB214D0C526232809D27D2C7E54FE02127F9253184E3397F2E01FD10FBC124AA",
+      "buildGeneratedSha256": "30B2E21AE357BD703C2C1B52E1F927BC07D6D6250E8AE2325F3B7B8EB76F8B1C",
+      "restoredSha256": "CB214D0C526232809D27D2C7E54FE02127F9253184E3397F2E01FD10FBC124AA",
+      "restoredToStart": true
+    },
+    {
+      "path": "Assets/Settings/DefaultVolumeProfile.asset",
+      "initialSha256": "6698BFACFAD479ACFD9766D00ABA81AB52527D3B15C8B133D03ED7A2401499D6",
+      "buildGeneratedSha256": "463776C51AE49D4FEF980E8FD268081B2F505610D79315003FAAE1ACFF8F4115",
+      "restoredSha256": "6698BFACFAD479ACFD9766D00ABA81AB52527D3B15C8B133D03ED7A2401499D6",
+      "restoredToStart": true
+    },
+    {
+      "path": "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+      "initialSha256": "F074F70005181226C7614CBFB06B064E692C1032763BEF94CCF334D91D0056D0",
+      "buildGeneratedSha256": "DE16216797B7D4212762916335811C880FF5E7F6A2BD066882137B949BD13AF1",
+      "restoredSha256": "F074F70005181226C7614CBFB06B064E692C1032763BEF94CCF334D91D0056D0",
+      "restoredToStart": true
+    },
+    {
+      "path": "ProjectSettings/ProjectSettings.asset",
+      "initialSha256": "27D2B126CACCC96A9CB3EE810AC757418216FD13B0DD08847886C23B31F73987",
+      "buildGeneratedSha256": "0E235B5A62D0D80DDAF6A71077F31914B2DA204CCC506F6270177A254A0716D2",
+      "restoredSha256": "27D2B126CACCC96A9CB3EE810AC757418216FD13B0DD08847886C23B31F73987",
+      "restoredToStart": true
+    }
+  ],
+  "runs": [
+    {
+      "name": "High_20s_01",
+      "exitCode": 0,
+      "durationRequested": 20,
+      "recoveryHistory": 0,
+      "executableSha256": "001AEEBFB92718F8B49F0C0E0A03E313C54669552B08E952B2FEE3DDD143683A",
+      "startedUtc": "2026-11-10T07:33:04.1390044Z",
+      "observedUtc": "2026-11-10T07:33:36.4667657Z",
+      "helperStartedUtc": "2026-11-10T07:33:04.1208041Z",
+      "helperEndedUtc": "2026-11-10T07:33:36.4870782Z",
+      "manifestSha256": "859B86835FF2C511AFFC92184E82926D6FB72CFB6A27C5C40361BA39BD9A574B"
+    },
+    {
+      "name": "High_20s_02",
+      "exitCode": 0,
+      "durationRequested": 20,
+      "recoveryHistory": 0,
+      "executableSha256": "001AEEBFB92718F8B49F0C0E0A03E313C54669552B08E952B2FEE3DDD143683A",
+      "startedUtc": "2026-11-10T07:33:36.5629134Z",
+      "observedUtc": "2026-11-10T07:34:04.0842709Z",
+      "helperStartedUtc": "2026-11-10T07:33:36.558737Z",
+      "helperEndedUtc": "2026-11-10T07:34:04.095214Z",
+      "manifestSha256": "5ED2A446E705A7B3BEB3FA148DC9AA7953917C4A9A16F28E615F43AD439C0B4A"
+    },
+    {
+      "name": "High_20s_03",
+      "exitCode": 0,
+      "durationRequested": 20,
+      "recoveryHistory": 0,
+      "executableSha256": "001AEEBFB92718F8B49F0C0E0A03E313C54669552B08E952B2FEE3DDD143683A",
+      "startedUtc": "2026-11-10T07:34:04.1448299Z",
+      "observedUtc": "2026-11-10T07:34:31.6121021Z",
+      "helperStartedUtc": "2026-11-10T07:34:04.1421624Z",
+      "helperEndedUtc": "2026-11-10T07:34:31.6224206Z",
+      "manifestSha256": "27446D5A03322990D819CFFCC9E6E21B5E9AA9F61FBB15CA2EFFEC19DBB60DBE"
+    },
+    {
+      "name": "High_recovery_5s",
+      "exitCode": 0,
+      "durationRequested": 5,
+      "recoveryHistory": 10,
+      "executableSha256": "001AEEBFB92718F8B49F0C0E0A03E313C54669552B08E952B2FEE3DDD143683A",
+      "startedUtc": "2026-11-10T07:34:31.6586156Z",
+      "observedUtc": "2026-11-10T07:34:43.812107Z",
+      "helperStartedUtc": "2026-11-10T07:34:31.6560157Z",
+      "helperEndedUtc": "2026-11-10T07:34:43.8224746Z",
+      "manifestSha256": "4DDA5721B7CA0896B54776710A678336DA2ADB129F5F38E81CA2B63739E6CEF3"
+    },
+    {
+      "name": "High_smoke_compat",
+      "exitCode": 0,
+      "durationRequested": 0,
+      "recoveryHistory": 0,
+      "executableSha256": "001AEEBFB92718F8B49F0C0E0A03E313C54669552B08E952B2FEE3DDD143683A",
+      "startedUtc": "2026-11-10T07:34:43.8659379Z",
+      "observedUtc": "2026-11-10T07:34:51.2757459Z",
+      "helperStartedUtc": "2026-11-10T07:34:43.8626911Z",
+      "helperEndedUtc": "2026-11-10T07:34:51.2846793Z",
+      "manifestSha256": "CFFA5426C92E5D0A9351E17C02B61B09E915357F5D4792DFBACAF9BD23E344AB"
+    }
+  ],
+  "analysisScriptSha256": "6AE13AC35824BBDDED462A71EB5093973A732BD18C2534B961D741B160BCD04E",
+  "rawHashInventorySha256": "7D13B784ED471397E21F1593FD00DFCC310BB227FFE910C1881E268A1B32A9B1",
+  "summarySha256": "1C3A9B828EB1C5071D6DD32D138D2F2C2F0CD7DA6F7ADD966F1CE5F50D886C72",
+  "postObservationPolicySha256": "D4AF027FDA105EC796FF33754ED20E809614E71ED07C419959231A94C259D52E",
+  "conclusion": "Capture/data-consistency checks passed; GPU timing reliability not established because positive finite impossible durations coexist with missing GPU data.",
+  "notes": [
+    "Raw acceptance flags describe the pre-existing positive-finite availability policy, not physical validation.",
+    "No raw values or accepted flags were changed by post-observation plausibility diagnostics.",
+    "Build outputs, Player logs, helper bounds/process metadata and extended snapshots remain local outside the Git repository.",
+    "Whole-device telemetry spans entire Player processes and is not a source-frame correlation or an isolated-load claim.",
+    "Previous C/D commits were pushed before this pilot; this pilot itself has not been committed or pushed."
+  ]
+}

@@ -80,6 +80,8 @@ Captures/OccluderReplay/**/*.json -text whitespace=cr-at-eol
 Captures/OccluderReplay/**/*.csv -text whitespace=cr-at-eol
 Measurements/FrameTiming/**/*.csv -text whitespace=cr-at-eol
 Measurements/FrameTiming/**/*.json -text whitespace=cr-at-eol
+Measurements/FrameTimingPilot/**/*.csv -text whitespace=cr-at-eol
+Measurements/FrameTimingPilot/**/*.json -text whitespace=cr-at-eol
 
 # 3D models
 *.3dm                   lfs

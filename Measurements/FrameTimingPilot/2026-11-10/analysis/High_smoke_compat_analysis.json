@@ -1,0 +1,381 @@
+{
+  "run": "High_smoke_compat",
+  "validation": "passed",
+  "requested_seconds": 0.0,
+  "measurement_seconds": 0.3528324999999999,
+  "phase_counts": {
+    "warmup": 8702,
+    "drain": 8,
+    "measurement": 1077
+  },
+  "block_origin_realtime_seconds": 5.71146280175737,
+  "block_origin_source": "manifest measurement start",
+  "gc_collections_during_measurement": [
+    0,
+    0,
+    0
+  ],
+  "measurement": {
+    "polls": 1077,
+    "returned_polls": 1077,
+    "accepted_unique_samples": 1000,
+    "excluded_polls": 77,
+    "gpu_zero_polls": 77,
+    "excluded_poll_fraction": 0.07149489322191271,
+    "gpu_zero_poll_fraction": 0.07149489322191271,
+    "nonzero_timestamp_ids_observed": 1077,
+    "ids_ever_gpu_zero": 77,
+    "ids_without_any_positive_gpu_return": 77,
+    "unique_id_gpu_unavailable_fraction": 0.07149489322191271,
+    "zero_then_positive_ids": [],
+    "focus_true_polls": 1077,
+    "focus_true_accepted": 1000,
+    "rejection_counts": {
+      "gpu_not_positive_finite": 77
+    },
+    "gpu_whole_frame_ms": {
+      "count": 1000,
+      "min": 0.098304,
+      "median": 0.106496,
+      "p95": 0.345088,
+      "max": 1.078272,
+      "mean": 0.15316224,
+      "sample_sd": 0.11707214904428914
+    },
+    "cpu_whole_frame_ms": {
+      "count": 1000,
+      "min": 0.1908,
+      "median": 0.2893,
+      "p95": 0.425245,
+      "max": 1.3449,
+      "mean": 0.322635,
+      "sample_sd": 0.12614203703963445
+    },
+    "gpu_duration_exceeds_application_lifetime": [],
+    "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+    "accepted_cpu_clock_span_seconds": 0.3534818,
+    "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+  },
+  "one_second_blocks": {
+    "clock": "poll realtime; not delayed timing source-frame time",
+    "outside_interval_rows_assigned_to_end_blocks": 0,
+    "blocks": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 0.3528324999999999,
+        "polls": 1077,
+        "returned_polls": 1077,
+        "accepted_unique_samples": 1000,
+        "excluded_polls": 77,
+        "gpu_zero_polls": 77,
+        "excluded_poll_fraction": 0.07149489322191271,
+        "gpu_zero_poll_fraction": 0.07149489322191271,
+        "nonzero_timestamp_ids_observed": 1077,
+        "ids_ever_gpu_zero": 77,
+        "ids_without_any_positive_gpu_return": 77,
+        "unique_id_gpu_unavailable_fraction": 0.07149489322191271,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 1077,
+        "focus_true_accepted": 1000,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 77
+        },
+        "gpu_whole_frame_ms": {
+          "count": 1000,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.345088,
+          "max": 1.078272,
+          "mean": 0.15316224,
+          "sample_sd": 0.11707214904428914
+        },
+        "cpu_whole_frame_ms": {
+          "count": 1000,
+          "min": 0.1908,
+          "median": 0.2893,
+          "p95": 0.425245,
+          "max": 1.3449,
+          "mean": 0.322635,
+          "sample_sd": 0.12614203703963445
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.3534818,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      }
+    ]
+  },
+  "five_second_blocks": {
+    "clock": "poll realtime; not delayed timing source-frame time",
+    "outside_interval_rows_assigned_to_end_blocks": 0,
+    "blocks": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 0.3528324999999999,
+        "polls": 1077,
+        "returned_polls": 1077,
+        "accepted_unique_samples": 1000,
+        "excluded_polls": 77,
+        "gpu_zero_polls": 77,
+        "excluded_poll_fraction": 0.07149489322191271,
+        "gpu_zero_poll_fraction": 0.07149489322191271,
+        "nonzero_timestamp_ids_observed": 1077,
+        "ids_ever_gpu_zero": 77,
+        "ids_without_any_positive_gpu_return": 77,
+        "unique_id_gpu_unavailable_fraction": 0.07149489322191271,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 1077,
+        "focus_true_accepted": 1000,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 77
+        },
+        "gpu_whole_frame_ms": {
+          "count": 1000,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.345088,
+          "max": 1.078272,
+          "mean": 0.15316224,
+          "sample_sd": 0.11707214904428914
+        },
+        "cpu_whole_frame_ms": {
+          "count": 1000,
+          "min": 0.1908,
+          "median": 0.2893,
+          "p95": 0.425245,
+          "max": 1.3449,
+          "mean": 0.322635,
+          "sample_sd": 0.12614203703963445
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.3534818,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      }
+    ]
+  },
+  "telemetry": {
+    "status": "recorded",
+    "rows": 8,
+    "fields": [
+      "timestamp",
+      " pstate",
+      " utilization.gpu [%]",
+      " clocks.current.graphics [MHz]",
+      " clocks.current.memory [MHz]",
+      " temperature.gpu",
+      " power.draw [W]"
+    ],
+    "metrics": {
+      " utilization.gpu [%]": {
+        "count": 8,
+        "min": 2.0,
+        "median": 56.0,
+        "p95": 63.0,
+        "max": 63.0,
+        "mean": 44.0,
+        "sample_sd": 26.48449681282564,
+        "unparsed_or_missing_rows": 0
+      },
+      " clocks.current.graphics [MHz]": {
+        "count": 8,
+        "min": 2790.0,
+        "median": 2790.0,
+        "p95": 2790.0,
+        "max": 2790.0,
+        "mean": 2790.0,
+        "sample_sd": 0.0,
+        "unparsed_or_missing_rows": 0
+      },
+      " clocks.current.memory [MHz]": {
+        "count": 8,
+        "min": 10501.0,
+        "median": 10501.0,
+        "p95": 10501.0,
+        "max": 10501.0,
+        "mean": 10501.0,
+        "sample_sd": 0.0,
+        "unparsed_or_missing_rows": 0
+      },
+      " temperature.gpu": {
+        "count": 8,
+        "min": 48.0,
+        "median": 49.5,
+        "p95": 53.0,
+        "max": 53.0,
+        "mean": 50.25,
+        "sample_sd": 2.1213203435596424,
+        "unparsed_or_missing_rows": 0
+      },
+      " power.draw [W]": {
+        "count": 8,
+        "min": 52.15,
+        "median": 73.15,
+        "p95": 106.9815,
+        "max": 107.09,
+        "mean": 79.73375000000001,
+        "sample_sd": 20.834413795791946,
+        "unparsed_or_missing_rows": 0
+      }
+    },
+    "scope": "Whole GPU with ambient applications over the process, including startup/warmup/measurement. Not an exact measurement-window trace or Player-only attribution; timestamp timezone is unconfirmed and not aligned to source frames."
+  },
+  "ready": {
+    "utc": "2026-11-10T07:34:50.2119653Z",
+    "unityVersion": "6000.6.5f1",
+    "platform": "WindowsPlayer",
+    "operatingSystem": "Windows 10  (10.0.19045) 64bit",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "graphicsVersion": "Direct3D 11.0 [level 11.1]",
+    "graphicsAPI": "Direct3D11",
+    "renderingThreadingMode": "LegacyJobified",
+    "activeColorSpace": "Linear",
+    "cpuTimerFrequencyDiagnostic": "10000000",
+    "gpuTimerFrequencyDiagnostic": "1000000000",
+    "pipeline": "PCF_Baseline_URP",
+    "expectedPreset": "High",
+    "lightShadows": "Soft",
+    "perLightQuality": "High",
+    "cameraAntialiasing": "None",
+    "focused": true,
+    "runInBackground": true,
+    "timingFeatureEnabled": true,
+    "supportsGpuRecorder": true,
+    "mainLightShadowKeyword": true,
+    "softShadowKeyword": true,
+    "cameraHDR": false,
+    "cameraMSAA": false,
+    "cameraDynamicResolution": false,
+    "cameraPostProcessing": false,
+    "usesPipelineBias": true,
+    "realtimeSeconds": 5.71123660175737,
+    "screenWidth": 1920,
+    "screenHeight": 1080,
+    "cameraPixelWidth": 1920,
+    "cameraPixelHeight": 1080,
+    "vSyncCount": 0,
+    "targetFrameRate": -1,
+    "msaaSamples": 1,
+    "mainShadowResolution": 2048,
+    "cascades": 1,
+    "renderScale": 1.0,
+    "shadowDistance": 50.0,
+    "pipelineDepthBiasInput": 0.10000000149011612,
+    "pipelineNormalBiasInput": 0.5,
+    "cameraFOV": 45.0,
+    "lightStrength": 1.0,
+    "cameraPosition": {
+      "x": 8.0,
+      "y": 7.0,
+      "z": -11.0
+    },
+    "cameraRotation": {
+      "x": 23.964643478393555,
+      "y": 325.63720703125,
+      "z": -4.671575482007029e-07
+    },
+    "lightRotation": {
+      "x": 45.0,
+      "y": 145.0,
+      "z": 1.2074183359800372e-06
+    },
+    "mainLightShadowParams": {
+      "x": 1.0,
+      "y": 3.0,
+      "z": 0.0019616957288235426,
+      "w": -3.9042391777038574
+    },
+    "mainLightShadowmapSize": {
+      "x": 0.00048828125,
+      "y": 0.00048828125,
+      "z": 2048.0,
+      "w": 2048.0
+    },
+    "shadowBiasGlobalDiagnostic": {
+      "x": -0.014669103547930717,
+      "y": -0.07334551215171814,
+      "z": 1.0,
+      "w": 0.0
+    }
+  },
+  "final": {
+    "utc": "2026-11-10T07:34:50.5670944Z",
+    "unityVersion": "6000.6.5f1",
+    "platform": "WindowsPlayer",
+    "operatingSystem": "Windows 10  (10.0.19045) 64bit",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "graphicsVersion": "Direct3D 11.0 [level 11.1]",
+    "graphicsAPI": "Direct3D11",
+    "renderingThreadingMode": "LegacyJobified",
+    "activeColorSpace": "Linear",
+    "cpuTimerFrequencyDiagnostic": "10000000",
+    "gpuTimerFrequencyDiagnostic": "1000000000",
+    "pipeline": "PCF_Baseline_URP",
+    "expectedPreset": "High",
+    "lightShadows": "Soft",
+    "perLightQuality": "High",
+    "cameraAntialiasing": "None",
+    "focused": true,
+    "runInBackground": true,
+    "timingFeatureEnabled": true,
+    "supportsGpuRecorder": true,
+    "mainLightShadowKeyword": true,
+    "softShadowKeyword": true,
+    "cameraHDR": false,
+    "cameraMSAA": false,
+    "cameraDynamicResolution": false,
+    "cameraPostProcessing": false,
+    "usesPipelineBias": true,
+    "realtimeSeconds": 6.06576490175737,
+    "screenWidth": 1920,
+    "screenHeight": 1080,
+    "cameraPixelWidth": 1920,
+    "cameraPixelHeight": 1080,
+    "vSyncCount": 0,
+    "targetFrameRate": -1,
+    "msaaSamples": 1,
+    "mainShadowResolution": 2048,
+    "cascades": 1,
+    "renderScale": 1.0,
+    "shadowDistance": 50.0,
+    "pipelineDepthBiasInput": 0.10000000149011612,
+    "pipelineNormalBiasInput": 0.5,
+    "cameraFOV": 45.0,
+    "lightStrength": 1.0,
+    "cameraPosition": {
+      "x": 8.0,
+      "y": 7.0,
+      "z": -11.0
+    },
+    "cameraRotation": {
+      "x": 23.964643478393555,
+      "y": 325.63720703125,
+      "z": -4.671575482007029e-07
+    },
+    "lightRotation": {
+      "x": 45.0,
+      "y": 145.0,
+      "z": 1.2074183359800372e-06
+    },
+    "mainLightShadowParams": {
+      "x": 1.0,
+      "y": 3.0,
+      "z": 0.0019616957288235426,
+      "w": -3.9042391777038574
+    },
+    "mainLightShadowmapSize": {
+      "x": 0.00048828125,
+      "y": 0.00048828125,
+      "z": 2048.0,
+      "w": 2048.0
+    },
+    "shadowBiasGlobalDiagnostic": {
+      "x": -0.014669103547930717,
+      "y": -0.07334551215171814,
+      "z": 1.0,
+      "w": 0.0
+    }
+  }
+}

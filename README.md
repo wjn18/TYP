@@ -14,7 +14,9 @@ Also on **10 November 2026**, a standalone native High timing smoke collected th
 
 The first occluder-only replay was also implemented on **10 November 2026**. Two forward runs, a reverse run and a seek run exported 375 frame-indexed images and state records. See [occluder replay](Documentation/occluder-replay.md) for the trajectory, commands, verification and inspection preview.
 
-The settings remain initial development values. Formal timing reliability, camera/light motion, dynamic timing association, full-evaluation equivalence and adaptive sampling remain future work. There are no performance improvement results yet. Tasks C and D are in progress; M2 has not been passed.
+A subsequent [fixed-window timing pilot](Documentation/frame-timing-pilot.md) completed three 20-second High runs, a separate history diagnostic and a sample-count compatibility check. Longer windows exposed impossible positive GPU timings as well as missing returns. Collection/data consistency passed, but timing reliability has **not** been established; the original positive-finite `accepted` rule is insufficient for benchmark-quality data.
+
+The settings remain initial development values. Reliable formal timing, camera/light motion, dynamic timing association, full-evaluation equivalence and adaptive sampling remain future work. There are no performance improvement results yet. Tasks C and D are in progress; M2 has not been passed.
 
 ## Requirements and opening the project
 
@@ -81,5 +83,9 @@ The scene contains a receiving plane, a block, a thin wall and three posts of wi
 - `Documentation/occluder-replay.md`: replay protocol and current validation results.
 - `Documentation/occluder-replay-provenance.json`: exact source/build input hashes and raw-data linkage.
 - `Tools/analysis/analyse_replay.py`: independent replay-state and image verification.
+- `Measurements/FrameTimingPilot/`: longer-window raw timings, recovery diagnostic, GPU telemetry, hashes and analysis.
+- `Documentation/frame-timing-pilot.md`: reliability findings and commands; includes the unresolved impossible-positive-value issue.
+- `Documentation/frame-timing-pilot-provenance.json`: source/build/raw identities for the pilot.
+- `Tools/analysis/analyse_timing_pilot.py`: fixed-window, block, recovery, compatibility and plausibility verification.
 
 Unity package source remains in the installed packages. The repository preserves package references, lock data and source hashes; it does not vendor or modify URP. Cache, logs, user settings, generated IDE projects and build outputs are excluded by the Unity ignore rules.

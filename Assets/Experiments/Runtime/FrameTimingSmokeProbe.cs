@@ -16,10 +16,21 @@ namespace TYP.Experiments
     {
         private const int MaximumMeasurementPolls = 20000;
         private const double MaximumMeasurementSeconds = 30;
+        private const int MaximumDurationMeasurementPolls = 200000;
+        private const double MaximumRequestedDurationSeconds = 60;
         private readonly FrameTiming[] timingBuffer = new FrameTiming[1];
         private readonly List<Observation> observations = new List<Observation>();
         private readonly HashSet<ulong> observedTimestamps = new HashSet<ulong>();
         private readonly Dictionary<string, int> measurementRejections = new Dictionary<string, int>();
+        private readonly Dictionary<ulong, ZeroRecord> recoveryByTimestamp = new Dictionary<ulong, ZeroRecord>();
+        private readonly List<ZeroRecord> recoveryRecords = new List<ZeroRecord>();
+        private FrameTiming[] recoveryBuffer;
+        private int recoveryHistoryRequested, historyPolls;
+        private uint historyReturnedMin = uint.MaxValue, historyReturnedMax;
+        private ulong historyReturnedTotal;
+        private bool recoveryArgumentSpecified;
+        private double recoveryStartedRealtimeSeconds = -1, recoveryEndedRealtimeSeconds = -1;
+        private string recoveryError;
         private NativeBaselineRunner runner;
         private Camera mainCamera;
         private Light mainLight;
@@ -30,6 +41,8 @@ namespace TYP.Experiments
         private Report report;
         private string outputDirectory;
         private bool outputValidated, quitRequested, finished;
+        private bool fixedDurationMode;
+        private double requestedMeasurementSeconds;
         private int requestedSamples = 1000, requestedWarmupFrames = 300, acceptedSamples;
         private int pollIndex, measurementPolls;
         private ulong maximumObservedTimestamp, firstAcceptedTimestamp, lastAcceptedTimestamp;
@@ -58,6 +71,16 @@ namespace TYP.Experiments
                         requestedSamples = int.Parse(arg.Substring("--pcf-timing-samples=".Length), CultureInfo.InvariantCulture);
                     else if (arg.StartsWith("--pcf-timing-warmup=", StringComparison.Ordinal))
                         requestedWarmupFrames = int.Parse(arg.Substring("--pcf-timing-warmup=".Length), CultureInfo.InvariantCulture);
+                    else if (arg.StartsWith("--pcf-timing-duration-seconds=", StringComparison.Ordinal))
+                    {
+                        fixedDurationMode = true;
+                        requestedMeasurementSeconds = double.Parse(arg.Substring("--pcf-timing-duration-seconds=".Length), CultureInfo.InvariantCulture);
+                    }
+                    else if (arg.StartsWith("--pcf-timing-recovery-history=", StringComparison.Ordinal))
+                    {
+                        recoveryArgumentSpecified = true;
+                        recoveryHistoryRequested = int.Parse(arg.Substring("--pcf-timing-recovery-history=".Length), CultureInfo.InvariantCulture);
+                    }
                     else if (arg.StartsWith("--pcf-preset=", StringComparison.Ordinal))
                     {
                         if (!Enum.TryParse(arg.Substring("--pcf-preset=".Length), true, out expectedPreset) ||
@@ -76,6 +99,16 @@ namespace TYP.Experiments
                     throw new ArgumentOutOfRangeException(nameof(requestedSamples), "Samples must be between 1 and 20000.");
                 if (requestedWarmupFrames < 300)
                     throw new ArgumentOutOfRangeException(nameof(requestedWarmupFrames), "Use at least 300 warmup frames.");
+                if (fixedDurationMode && (!PositiveFinite(requestedMeasurementSeconds) || requestedMeasurementSeconds > MaximumRequestedDurationSeconds))
+                    throw new ArgumentOutOfRangeException(nameof(requestedMeasurementSeconds), "Duration must be finite, positive and at most 60 seconds; 1 to 60 seconds is recommended.");
+                if (recoveryArgumentSpecified && (!fixedDurationMode || recoveryHistoryRequested < 1 || recoveryHistoryRequested > 10))
+                    throw new ArgumentException("Recovery history requires duration mode and a value from 1 to 10.");
+                if (fixedDurationMode)
+                {
+                    observations.Capacity = Math.Max(observations.Capacity, 220000);
+                    observedTimestamps.EnsureCapacity(220000);
+                }
+                if (recoveryHistoryRequested > 0) recoveryBuffer = new FrameTiming[recoveryHistoryRequested];
                 runner = FindAnyObjectByType<NativeBaselineRunner>();
                 mainCamera = Camera.main;
                 mainLight = RenderSettings.sun;
@@ -123,9 +156,13 @@ namespace TYP.Experiments
             if (conditions != null) { Finish(false, "controls_invalid", conditions); yield break; }
             report.ready = Snapshot();
             Status = "Collecting unique valid frame timings";
+            report.measurementStartGcCollections = CollectionCounts();
             double measurementStarted = Time.realtimeSinceStartupAsDouble;
-            while (acceptedSamples < requestedSamples && measurementPolls < MaximumMeasurementPolls &&
-                   Time.realtimeSinceStartupAsDouble - measurementStarted < MaximumMeasurementSeconds)
+            report.measurementStartedRealtimeSeconds = measurementStarted;
+            int pollLimit = fixedDurationMode ? MaximumDurationMeasurementPolls : MaximumMeasurementPolls;
+            double durationLimit = fixedDurationMode ? requestedMeasurementSeconds : MaximumMeasurementSeconds;
+            while ((fixedDurationMode || acceptedSamples < requestedSamples) && measurementPolls < pollLimit &&
+                   Time.realtimeSinceStartupAsDouble - measurementStarted < durationLimit)
             {
                 if (!isActiveAndEnabled) { Finish(false, "interrupted", "Probe disabled during measurement."); yield break; }
                 conditions = ValidateConditions();
@@ -133,12 +170,20 @@ namespace TYP.Experiments
                 measurementPolls++;
                 if (pollFailure != null) { Finish(false, "poll_failed", pollFailure); yield break; }
                 if (conditions != null) { Finish(false, "controls_changed", conditions); yield break; }
+                if (fixedDurationMode && measurementPolls >= pollLimit && Time.realtimeSinceStartupAsDouble - measurementStarted < durationLimit)
+                {
+                    MarkMeasurementEnd();
+                    Finish(false, "measurement_poll_limit", "Safety poll limit reached before the requested duration elapsed.");
+                    yield break;
+                }
                 yield return null;
             }
-            report.measurementSeconds = Time.realtimeSinceStartupAsDouble - measurementStarted;
-            bool complete = acceptedSamples == requestedSamples;
-            Finish(complete, complete ? "completed" : "insufficient_valid_samples",
-                complete ? null : "Required unique positive CPU/GPU timing samples were not obtained within the measurement limits.");
+            MarkMeasurementEnd();
+            bool durationElapsed = !fixedDurationMode || report.measurementSeconds >= requestedMeasurementSeconds;
+            bool complete = fixedDurationMode ? durationElapsed && acceptedSamples >= requestedSamples : acceptedSamples == requestedSamples;
+            Finish(complete, complete ? "completed" : !durationElapsed ? "measurement_poll_limit" : "insufficient_valid_samples",
+                complete ? null : !durationElapsed ? "Safety poll limit reached before the requested duration elapsed." :
+                "Required unique positive CPU/GPU timing samples were not obtained within the measurement limits.");
         }
 
         private void Poll(string phase, bool measurement, string controlsError = null)
@@ -200,6 +245,74 @@ namespace TYP.Experiments
                 pollFailure = ex.Message;
             }
             observations.Add(observation);
+            if (recoveryBuffer != null)
+            {
+                try { ProbeRecovery(observation); }
+                catch (Exception ex) { recoveryError = ex.Message; pollFailure = "Recovery diagnostic failed: " + ex.Message; }
+            }
+        }
+
+        private void ProbeRecovery(Observation latest)
+        {
+            double now = Time.realtimeSinceStartupAsDouble;
+            if (recoveryStartedRealtimeSeconds < 0) recoveryStartedRealtimeSeconds = now;
+            // Seed zero values from the unchanged primary poll too: the history
+            // call may already see that same timestamp's GPU result recovered.
+            if (latest.returnedCount > 0 && latest.frameStartTimestamp != 0 && latest.gpuFrameTimeMs == 0 &&
+                !recoveryByTimestamp.ContainsKey(latest.frameStartTimestamp))
+            {
+                var zero = new ZeroRecord
+                {
+                    frameStartTimestamp = latest.frameStartTimestamp.ToString(CultureInfo.InvariantCulture),
+                    firstPoll = latest.pollIndex, firstPhase = latest.phase, firstRealtime = now,
+                    firstSlot = -1, firstSource = "latest_poll", latestWasZero = true, primaryObservedZero = true
+                };
+                recoveryByTimestamp.Add(latest.frameStartTimestamp, zero); recoveryRecords.Add(zero);
+            }
+            else if (latest.returnedCount > 0 && latest.frameStartTimestamp != 0 && latest.gpuFrameTimeMs == 0 &&
+                     recoveryByTimestamp.TryGetValue(latest.frameStartTimestamp, out ZeroRecord primaryZero))
+                primaryZero.primaryObservedZero = true;
+            uint count = FrameTimingManager.GetLatestTimings((uint)recoveryBuffer.Length, recoveryBuffer);
+            now = Time.realtimeSinceStartupAsDouble;
+            historyPolls++;
+            historyReturnedMin = Math.Min(historyReturnedMin, count);
+            historyReturnedMax = Math.Max(historyReturnedMax, count);
+            historyReturnedTotal += count;
+            for (int slot = 0; slot < Math.Min(count, (uint)recoveryBuffer.Length); slot++)
+            {
+                FrameTiming value = recoveryBuffer[slot];
+                if (value.frameStartTimestamp == 0) continue;
+                if (value.gpuFrameTime == 0 && !recoveryByTimestamp.ContainsKey(value.frameStartTimestamp))
+                {
+                    var zero = new ZeroRecord
+                    {
+                        frameStartTimestamp = value.frameStartTimestamp.ToString(CultureInfo.InvariantCulture),
+                        firstPoll = latest.pollIndex, firstPhase = latest.phase, firstRealtime = now, firstSlot = slot,
+                        firstSource = "history_probe",
+                        latestWasZero = false
+                    };
+                    recoveryByTimestamp.Add(value.frameStartTimestamp, zero);
+                    recoveryRecords.Add(zero);
+                }
+                if (PositiveFinite(value.gpuFrameTime) && PositiveFinite(value.cpuFrameTime) &&
+                    recoveryByTimestamp.TryGetValue(value.frameStartTimestamp, out ZeroRecord record) && !record.recovered)
+                {
+                    record.recovered = true; record.firstRecoveredPoll = latest.pollIndex;
+                    record.firstRecoveredPhase = latest.phase; record.firstRecoveredRealtime = now; record.firstRecoveredSlot = slot;
+                    record.recoveryDelaySeconds = now - record.firstRealtime;
+                    record.recoveredGpuFrameTimeMs = value.gpuFrameTime; record.recoveredCpuFrameTimeMs = value.cpuFrameTime;
+                }
+            }
+            recoveryEndedRealtimeSeconds = Time.realtimeSinceStartupAsDouble;
+        }
+
+        private static int[] CollectionCounts() { return new[] { GC.CollectionCount(0), GC.CollectionCount(1), GC.CollectionCount(2) }; }
+        private void MarkMeasurementEnd()
+        {
+            if (report == null || report.measurementStartedRealtimeSeconds < 0 || report.measurementEndedRealtimeSeconds >= 0) return;
+            report.measurementEndedRealtimeSeconds = Time.realtimeSinceStartupAsDouble;
+            report.measurementSeconds = report.measurementEndedRealtimeSeconds - report.measurementStartedRealtimeSeconds;
+            report.measurementEndGcCollections = CollectionCounts();
         }
 
         private string ValidateConditions()
@@ -298,11 +411,22 @@ namespace TYP.Experiments
         private void Finish(bool success, string state, string error)
         {
             if (finished) return;
+            MarkMeasurementEnd();
             finished = true;
             IsBusy = false;
             if (report == null) report = new Report { startedUtc = DateTime.UtcNow.ToString("o") };
             report.state = state; report.error = error; report.endedUtc = DateTime.UtcNow.ToString("o");
             report.requestedSamples = requestedSamples; report.acceptedSamples = acceptedSamples;
+            report.completionCriterion = fixedDurationMode ? "fixed_duration" : "sample_count";
+            report.requestedMeasurementSeconds = requestedMeasurementSeconds;
+            report.minimumValidSamples = requestedSamples;
+            report.maximumMeasurementPolls = fixedDurationMode ? MaximumDurationMeasurementPolls : MaximumMeasurementPolls;
+            report.maximumMeasurementSeconds = fixedDurationMode ? requestedMeasurementSeconds : MaximumMeasurementSeconds;
+            if (fixedDurationMode)
+                report.classification = "Fixed-duration whole-frame timing reliability pilot, not a formal benchmark. Recorded ambient GPU/CPU activity and FrameTimingManager capture/polling instrumentation remain. CPU/GPU frame times are already milliseconds; GPU time is whole-frame, not PCF-only or a render pass. Screenshot capture and image readback are excluded. Timer frequencies are diagnostic only. Observations are buffered in memory and written after measurement; minimum valid samples are checked only after the duration ends.";
+            report.recoveryHistoryRequested = recoveryHistoryRequested;
+            if (recoveryHistoryRequested > 0)
+                report.classification += " Additional GetLatestTimings history-recovery probing is enabled; this extra API overhead prevents pooling this run with ordinary timing pilots.";
             report.requestedWarmupFrames = requestedWarmupFrames; report.measurementPolls = measurementPolls;
             report.totalRecordedPolls = observations.Count; report.expectedPreset = expectedPreset.ToString();
             report.firstAcceptedTimestamp = firstAcceptedTimestamp.ToString(CultureInfo.InvariantCulture);
@@ -327,6 +451,21 @@ namespace TYP.Experiments
                 {
                     File.WriteAllText(Path.Combine(outputDirectory, "observations.csv"), BuildCsv());
                     File.WriteAllText(Path.Combine(outputDirectory, "timing_smoke.json"), JsonUtility.ToJson(report, true));
+                    if (recoveryHistoryRequested > 0)
+                    {
+                        int recoveredCount = 0;
+                        foreach (ZeroRecord zero in recoveryRecords) if (zero.recovered) recoveredCount++;
+                        var recovery = new RecoveryReport
+                        {
+                            historyRequested = recoveryHistoryRequested, historyPolls = historyPolls,
+                            actualReturnedMin = historyPolls == 0 ? 0 : historyReturnedMin, actualReturnedMax = historyReturnedMax,
+                            actualReturnedTotal = historyReturnedTotal.ToString(CultureInfo.InvariantCulture),
+                            startedRealtimeSeconds = recoveryStartedRealtimeSeconds, endedRealtimeSeconds = recoveryEndedRealtimeSeconds,
+                            zeroTimestampCount = recoveryRecords.Count, recoveredCount = recoveredCount,
+                            unrecoveredCount = recoveryRecords.Count - recoveredCount, zeroRecords = recoveryRecords, error = recoveryError
+                        };
+                        File.WriteAllText(Path.Combine(outputDirectory, "timing_recovery.json"), JsonUtility.ToJson(recovery, true));
+                    }
                 }
             }
             catch (Exception ex) { success = false; error = (error == null ? "" : error + " ") + "Output write failed: " + ex.Message; }
@@ -390,8 +529,12 @@ namespace TYP.Experiments
         [Serializable] private sealed class RejectionCount { public string reason; public int count; }
         [Serializable] private sealed class Report
         {
-            public string startedUtc, endedUtc, state, error, snapshotError, expectedPreset;
-            public double applicationStartupRealtimeSeconds, warmupSeconds, measurementSeconds;
+            public string startedUtc, endedUtc, state, error, snapshotError, expectedPreset, completionCriterion;
+            public double applicationStartupRealtimeSeconds, warmupSeconds, measurementSeconds, requestedMeasurementSeconds;
+            public int minimumValidSamples;
+            public int recoveryHistoryRequested;
+            public double measurementStartedRealtimeSeconds = -1, measurementEndedRealtimeSeconds = -1;
+            public int[] measurementStartGcCollections, measurementEndGcCollections;
             public int requestedSamples, acceptedSamples, requestedWarmupFrames, warmupFrames, drainFrames, measurementPolls, totalRecordedPolls;
             public string firstAcceptedTimestamp, lastAcceptedTimestamp;
             public List<RejectionCount> rejections;
@@ -400,6 +543,22 @@ namespace TYP.Experiments
             public string identityRule = "Timestamp zero, duplicates, timestamps not increasing, and non-positive/non-finite CPU or GPU times are excluded. Warmup and eight drain frames are recorded but never accepted. Timestamps observed during warmup/drain cannot be reused for measurement.";
             public int maximumMeasurementPolls = MaximumMeasurementPolls;
             public double maximumMeasurementSeconds = MaximumMeasurementSeconds;
+        }
+        [Serializable] private sealed class ZeroRecord
+        {
+            public string frameStartTimestamp, firstPhase, firstRecoveredPhase, firstSource;
+            public int firstPoll, firstSlot, firstRecoveredPoll = -1, firstRecoveredSlot = -1;
+            public double firstRealtime, firstRecoveredRealtime = -1, recoveryDelaySeconds = -1, recoveredGpuFrameTimeMs, recoveredCpuFrameTimeMs;
+            public bool latestWasZero, primaryObservedZero, recovered;
+        }
+        [Serializable] private sealed class RecoveryReport
+        {
+            public int historyRequested, historyPolls, zeroTimestampCount, recoveredCount, unrecoveredCount;
+            public uint actualReturnedMin, actualReturnedMax;
+            public string actualReturnedTotal, error;
+            public double startedRealtimeSeconds, endedRealtimeSeconds;
+            public List<ZeroRecord> zeroRecords;
+            public string classification = "Additional GetLatestTimings history availability/recovery diagnostic across warmup, drain and measurement. First zero-GPU observations and later positive CPU/GPU observations are linked by nonzero timestamp, including unrecovered entries. Primary acceptance and seen-timestamp rules are unchanged. Additional API work means this run must not be pooled with ordinary pilots. Filter firstPhase/firstRecoveredPhase for measurement-specific recovery analysis.";
         }
         [Serializable] private sealed class SnapshotData
         {

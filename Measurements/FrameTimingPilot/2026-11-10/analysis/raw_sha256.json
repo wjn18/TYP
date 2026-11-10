@@ -1,0 +1,22 @@
+{
+  "algorithm": "sha256",
+  "paths_relative_to": "pilot input root",
+  "files": {
+    "High_20s_01/gpu_telemetry.csv": "3a9e3c323626092c8e7cdf2f8c64db727f9a5d263c0dc6185e8477fd8a2d6a74",
+    "High_20s_01/observations.csv": "1cc14a7e63a927ac6aebdea09dcf438946fa5d614be91990ae08f9c0f2f59eb1",
+    "High_20s_01/timing_smoke.json": "859b86835ff2c511affc92184e82926d6fb72cfb6a27c5c40361ba39bd9a574b",
+    "High_20s_02/gpu_telemetry.csv": "79d6d450cba133aa034d8a85bdcb67092291cb5875c817667d77b9fdbcceea98",
+    "High_20s_02/observations.csv": "f6b6958ab7d1ec55b752eba199e017d2359ee8304a4ebb836fc9f5618b3b85ec",
+    "High_20s_02/timing_smoke.json": "5ed2a446e705a7b3beb3fa148dc9aa7953917c4a9a16f28e615f43ad439c0b4a",
+    "High_20s_03/gpu_telemetry.csv": "f07a3d274495ec8fc204a28f8da017a52def9d83b8f6d55f8934047a2bad3b6b",
+    "High_20s_03/observations.csv": "4933b8e31dbd7b5137e1a479a037bfa4537dea33494dd3e7a39d74e69a09eb70",
+    "High_20s_03/timing_smoke.json": "27446d5a03322990d819cffcc9e6e21b5e9aa9f61fbb15ca2effec19dbb60dbe",
+    "High_recovery_5s/gpu_telemetry.csv": "bb9899748262215cdfe3d8daab58e5aaac1ce8137f3e4badc743366ef4c8b561",
+    "High_recovery_5s/observations.csv": "b8933d91ec2c9cd9ac5503fabb927a5bd7d19003cb60d3f2edc96f834c047f95",
+    "High_recovery_5s/timing_recovery.json": "5a4041f0b6314666ea4e2b19d7abc11c1c508d091f2835f3b11ddc4dc5b08f8d",
+    "High_recovery_5s/timing_smoke.json": "4dda5721b7ca0896b54776710a678336da2adb129f5f38e81ca2b63739e6cef3",
+    "High_smoke_compat/gpu_telemetry.csv": "e85d143216832ec7e20b5b4e62d981c78abcea92b2e7141f5cf41a194b6e7a19",
+    "High_smoke_compat/observations.csv": "a92b80cfdc443f528a277ec9871fd91b4a4fe8e0dc20f2f9b2f9d8ea40563eb1",
+    "High_smoke_compat/timing_smoke.json": "cffa5426c92e5d0a9351e17c02b61b09e915357f5d4792dfbacaf9bd23e344ab"
+  }
+}

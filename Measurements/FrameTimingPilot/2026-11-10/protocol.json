@@ -1,0 +1,23 @@
+{
+  "experimentId": "C-TIMING-RELIABILITY-PILOT-01",
+  "plannedDate": "2026-11-10",
+  "plannedCompletionDate": "2026-11-10",
+  "owner": "Assistant under user continuation instruction after verified GitHub push",
+  "nature": "Assistant implementation/validation protocol, not a university requirement or frozen benchmark protocol",
+  "question": "How do missing whole-frame GPU timings and accepted-sample distributions vary over longer windows in the existing static native High scene? Can zero timings later become positive in retained history?",
+  "dependency": "Task C standalone timing smoke and recorded native High configuration",
+  "scene": "Assets/Scenes/PCF_Baseline.unity",
+  "build": "Non-development Windows x64 Direct3D11 Player",
+  "ordinaryRuns": ["High_20s_01", "High_20s_02", "High_20s_03"],
+  "ordinaryMeasurementSecondsPerRun": 20,
+  "separateDiagnostic": {"run": "High_recovery_5s", "measurementSeconds": 5, "requestedHistoryFrames": 10, "scope": "Track first zero and first later positive by source timestamp; additional history polling changes instrumentation and is not pooled with ordinary 20s runs"},
+  "warmup": {"minimumFrames": 300, "minimumSeconds": 3, "drainFrames": 8, "caveat": "A short warmup does not establish thermal equilibrium"},
+  "termination": "Fixed elapsed wall-clock window, not accepted sample count. Minimum 1000 valid returns checked only at completion. Duration poll cap 200000; cap before duration is failure/partial.",
+  "controls": {"preset": "High", "output": [1920,1080], "renderScale": 1, "shadowMap": 2048, "cascades": 1, "shadowDistance": 50, "pipelineBiasInputs": [0.1,0.5], "vsync": 0, "targetFrameRate": -1, "antiAliasingPostHdrDynamicResolution": "disabled", "motion": "none"},
+  "retention": "Preserve all warmup/drain/measurement latest-one observations, including GPU=0, duplicates and absent returns. No per-frame I/O, screenshots or GPU image readback. Buffered memory collection and timing/configuration checks still have overhead.",
+  "ambientLoad": "Do not close or modify the user's other graphics applications. Record global GPU utilization, clocks, temperature and power at 1 Hz, plus helper UTC bounds. This is observed shared-desktop load, not isolated formal benchmarking.",
+  "technicalAcceptance": ["All three ordinary runs cover at least 20 seconds without early cap", "Recorded controls remain valid", "Raw observation identities, reasons and manifest counts independently agree", "All missing data is preserved, not imputed as zero cost", "Independent 1s and 5s block summaries preserve empty blocks"],
+  "analysis": ["Poll-level and unique-timestamp missingness", "Accepted CPU/GPU median, P95 and repeated-process variation", "1-second/5-second time blocks and focus status", "Zero runs, source-timestamp gaps and repeat identity recovery", "Recovery diagnostic separate from ordinary-window distributions", "Raw SHA-256 inventories and source/build provenance"],
+  "limits": "No arbitrary missing-rate threshold establishes stability; no PCF-only cost, performance gain, temporal-quality, independent-frame significance, complete M2 or finalized four-preset comparison claim.",
+  "status": "Pre-execution protocol; manifests and experiment record describe actual execution separately"
+}

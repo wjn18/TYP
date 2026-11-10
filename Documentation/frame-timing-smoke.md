@@ -20,6 +20,8 @@ The probe warms up for at least 300 frames and three seconds, records eight drai
 
 ## Recorded results
 
+**Later on 10 November:** the [longer-window pilot](frame-timing-pilot.md) exposed impossible positive finite GPU durations. The smoke below remains an availability check, while its original acceptance rule is insufficient to establish timing reliability. The pilot preserves and flags the anomalous raw values; it does not proceed to formal preset benchmarking.
+
 | Run | Valid unique samples | GPU median/P95 ms | GPU=0 returns excluded | Measurement window s |
 |---|---:|---|---:|---:|
 | High_01 | 1000 | 0.104448 / 0.108544 | 109 of 1109 | 0.287265 |

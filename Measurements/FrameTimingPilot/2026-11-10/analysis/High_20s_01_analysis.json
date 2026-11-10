@@ -1,0 +1,1478 @@
+{
+  "run": "High_20s_01",
+  "validation": "passed",
+  "requested_seconds": 20.0,
+  "measurement_seconds": 20.0002694,
+  "phase_counts": {
+    "warmup": 8633,
+    "drain": 8,
+    "measurement": 61664
+  },
+  "block_origin_realtime_seconds": 5.725878000623583,
+  "block_origin_source": "manifest measurement start",
+  "gc_collections_during_measurement": [
+    0,
+    0,
+    0
+  ],
+  "measurement": {
+    "polls": 61664,
+    "returned_polls": 61664,
+    "accepted_unique_samples": 57696,
+    "excluded_polls": 3968,
+    "gpu_zero_polls": 3968,
+    "excluded_poll_fraction": 0.06434872859366891,
+    "gpu_zero_poll_fraction": 0.06434872859366891,
+    "nonzero_timestamp_ids_observed": 61664,
+    "ids_ever_gpu_zero": 3968,
+    "ids_without_any_positive_gpu_return": 3968,
+    "unique_id_gpu_unavailable_fraction": 0.06434872859366891,
+    "zero_then_positive_ids": [],
+    "focus_true_polls": 61664,
+    "focus_true_accepted": 57696,
+    "rejection_counts": {
+      "gpu_not_positive_finite": 3968
+    },
+    "gpu_whole_frame_ms": {
+      "count": 57696,
+      "min": 0.09728,
+      "median": 0.106496,
+      "p95": 0.346112,
+      "max": 16652448076510.7,
+      "mean": 1731743767.1649766,
+      "sample_sd": 169809522649.30832
+    },
+    "cpu_whole_frame_ms": {
+      "count": 57696,
+      "min": 0.1839,
+      "median": 0.2844,
+      "p95": 0.425525,
+      "max": 1.954,
+      "mean": 0.3230478768025513,
+      "sample_sd": 0.13022527098540534
+    },
+    "gpu_duration_exceeds_application_lifetime": [
+      {
+        "poll_index": 11937,
+        "phase": "measurement",
+        "frame_start_timestamp": "6122556163845",
+        "gpu_frame_time_ms": 16652448076510.7,
+        "application_realtime_ms_at_poll": 6763.380400623584,
+        "runtime_accepted": true
+      },
+      {
+        "poll_index": 55755,
+        "phase": "measurement",
+        "frame_start_timestamp": "6122698771623",
+        "gpu_frame_time_ms": 16652448062250.152,
+        "application_realtime_ms_at_poll": 21024.249500623584,
+        "runtime_accepted": true
+      },
+      {
+        "poll_index": 56339,
+        "phase": "measurement",
+        "frame_start_timestamp": "6122700572626",
+        "gpu_frame_time_ms": 16652448062070.055,
+        "application_realtime_ms_at_poll": 21204.358700623587,
+        "runtime_accepted": true
+      },
+      {
+        "poll_index": 57669,
+        "phase": "measurement",
+        "frame_start_timestamp": "6122704782669",
+        "gpu_frame_time_ms": 16652448061649.082,
+        "application_realtime_ms_at_poll": 21625.028900623583,
+        "runtime_accepted": true
+      },
+      {
+        "poll_index": 62997,
+        "phase": "measurement",
+        "frame_start_timestamp": "6122722240965",
+        "gpu_frame_time_ms": 16652448059903.309,
+        "application_realtime_ms_at_poll": 23371.035500623584,
+        "runtime_accepted": true
+      },
+      {
+        "poll_index": 66302,
+        "phase": "measurement",
+        "frame_start_timestamp": "6122732934532",
+        "gpu_frame_time_ms": 16652448058833.957,
+        "application_realtime_ms_at_poll": 24440.352200623587,
+        "runtime_accepted": true
+      }
+    ],
+    "gpu_mean_sd_interpretation": "Uninterpretable as rendering cost: raw policy-accepted returns include impossible positive durations",
+    "accepted_cpu_clock_span_seconds": 20.0014095,
+    "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+  },
+  "one_second_blocks": {
+    "clock": "poll realtime; not delayed timing source-frame time",
+    "outside_interval_rows_assigned_to_end_blocks": 0,
+    "blocks": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 1,
+        "polls": 3186,
+        "returned_polls": 3186,
+        "accepted_unique_samples": 2991,
+        "excluded_polls": 195,
+        "gpu_zero_polls": 195,
+        "excluded_poll_fraction": 0.06120527306967985,
+        "gpu_zero_poll_fraction": 0.06120527306967985,
+        "nonzero_timestamp_ids_observed": 3186,
+        "ids_ever_gpu_zero": 195,
+        "ids_without_any_positive_gpu_return": 195,
+        "unique_id_gpu_unavailable_fraction": 0.06120527306967985,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3186,
+        "focus_true_accepted": 2991,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 195
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2991,
+          "min": 0.09728,
+          "median": 0.106496,
+          "p95": 0.342528,
+          "max": 1.342464,
+          "mean": 0.15233232497492477,
+          "sample_sd": 0.12332304762727432
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2991,
+          "min": 0.1855,
+          "median": 0.2804,
+          "p95": 0.41115,
+          "max": 1.7258,
+          "mean": 0.31217636242059515,
+          "sample_sd": 0.12370779969465151
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 1.0015365,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 1,
+        "end_seconds": 2,
+        "polls": 3093,
+        "returned_polls": 3093,
+        "accepted_unique_samples": 2926,
+        "excluded_polls": 167,
+        "gpu_zero_polls": 167,
+        "excluded_poll_fraction": 0.05399288716456515,
+        "gpu_zero_poll_fraction": 0.05399288716456515,
+        "nonzero_timestamp_ids_observed": 3093,
+        "ids_ever_gpu_zero": 167,
+        "ids_without_any_positive_gpu_return": 167,
+        "unique_id_gpu_unavailable_fraction": 0.05399288716456515,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3093,
+        "focus_true_accepted": 2926,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 167
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2926,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.34304,
+          "max": 16652448076510.7,
+          "mean": 5691198932.663456,
+          "sample_sd": 307851254206.69775
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2926,
+          "min": 0.1861,
+          "median": 0.2831,
+          "p95": 0.424,
+          "max": 1.7202,
+          "mean": 0.3216414900888585,
+          "sample_sd": 0.1259926343025529
+        },
+        "gpu_duration_exceeds_application_lifetime": [
+          {
+            "poll_index": 11937,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122556163845",
+            "gpu_frame_time_ms": 16652448076510.7,
+            "application_realtime_ms_at_poll": 6763.380400623584,
+            "runtime_accepted": true
+          }
+        ],
+        "gpu_mean_sd_interpretation": "Uninterpretable as rendering cost: raw policy-accepted returns include impossible positive durations",
+        "accepted_cpu_clock_span_seconds": 0.9995719,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 2,
+        "end_seconds": 3,
+        "polls": 2999,
+        "returned_polls": 2999,
+        "accepted_unique_samples": 2840,
+        "excluded_polls": 159,
+        "gpu_zero_polls": 159,
+        "excluded_poll_fraction": 0.05301767255751917,
+        "gpu_zero_poll_fraction": 0.05301767255751917,
+        "nonzero_timestamp_ids_observed": 2999,
+        "ids_ever_gpu_zero": 159,
+        "ids_without_any_positive_gpu_return": 159,
+        "unique_id_gpu_unavailable_fraction": 0.05301767255751917,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 2999,
+        "focus_true_accepted": 2840,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 159
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2840,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.346112,
+          "max": 1.593344,
+          "mean": 0.16607765633802815,
+          "sample_sd": 0.13186816255668496
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2840,
+          "min": 0.1935,
+          "median": 0.28695,
+          "p95": 0.4313249999999999,
+          "max": 1.6208,
+          "mean": 0.33155651408450704,
+          "sample_sd": 0.13369901777695498
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9995214,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 3,
+        "end_seconds": 4,
+        "polls": 2998,
+        "returned_polls": 2998,
+        "accepted_unique_samples": 2814,
+        "excluded_polls": 184,
+        "gpu_zero_polls": 184,
+        "excluded_poll_fraction": 0.061374249499666446,
+        "gpu_zero_poll_fraction": 0.061374249499666446,
+        "nonzero_timestamp_ids_observed": 2998,
+        "ids_ever_gpu_zero": 184,
+        "ids_without_any_positive_gpu_return": 184,
+        "unique_id_gpu_unavailable_fraction": 0.061374249499666446,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 2998,
+        "focus_true_accepted": 2814,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 184
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2814,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.346112,
+          "max": 1.383424,
+          "mean": 0.16482679175550816,
+          "sample_sd": 0.13063754102784944
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2814,
+          "min": 0.1912,
+          "median": 0.29015,
+          "p95": 0.45327,
+          "max": 1.4162,
+          "mean": 0.332494420753376,
+          "sample_sd": 0.13031495054570313
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9999124,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 4,
+        "end_seconds": 5,
+        "polls": 3024,
+        "returned_polls": 3024,
+        "accepted_unique_samples": 2867,
+        "excluded_polls": 157,
+        "gpu_zero_polls": 157,
+        "excluded_poll_fraction": 0.05191798941798942,
+        "gpu_zero_poll_fraction": 0.05191798941798942,
+        "nonzero_timestamp_ids_observed": 3024,
+        "ids_ever_gpu_zero": 157,
+        "ids_without_any_positive_gpu_return": 157,
+        "unique_id_gpu_unavailable_fraction": 0.05191798941798942,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3024,
+        "focus_true_accepted": 2867,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 157
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2867,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.34478079999999983,
+          "max": 1.432576,
+          "mean": 0.16200960446459714,
+          "sample_sd": 0.11969554149733547
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2867,
+          "min": 0.1963,
+          "median": 0.2861,
+          "p95": 0.4235199999999997,
+          "max": 1.6054,
+          "mean": 0.3289259155912103,
+          "sample_sd": 0.129305987176827
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9997923,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 5,
+        "end_seconds": 6,
+        "polls": 3086,
+        "returned_polls": 3086,
+        "accepted_unique_samples": 2889,
+        "excluded_polls": 197,
+        "gpu_zero_polls": 197,
+        "excluded_poll_fraction": 0.06383668178872326,
+        "gpu_zero_poll_fraction": 0.06383668178872326,
+        "nonzero_timestamp_ids_observed": 3086,
+        "ids_ever_gpu_zero": 197,
+        "ids_without_any_positive_gpu_return": 197,
+        "unique_id_gpu_unavailable_fraction": 0.06383668178872326,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3086,
+        "focus_true_accepted": 2889,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 197
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2889,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.345088,
+          "max": 1.435648,
+          "mean": 0.15847667151263414,
+          "sample_sd": 0.12910772044572
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2889,
+          "min": 0.1878,
+          "median": 0.2843,
+          "p95": 0.43008,
+          "max": 1.8357,
+          "mean": 0.32350179993077194,
+          "sample_sd": 0.13558571055510027
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9993951,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 6,
+        "end_seconds": 7,
+        "polls": 3115,
+        "returned_polls": 3115,
+        "accepted_unique_samples": 2895,
+        "excluded_polls": 220,
+        "gpu_zero_polls": 220,
+        "excluded_poll_fraction": 0.07062600321027288,
+        "gpu_zero_poll_fraction": 0.07062600321027288,
+        "nonzero_timestamp_ids_observed": 3115,
+        "ids_ever_gpu_zero": 220,
+        "ids_without_any_positive_gpu_return": 220,
+        "unique_id_gpu_unavailable_fraction": 0.07062600321027288,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3115,
+        "focus_true_accepted": 2895,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 220
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2895,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.34304,
+          "max": 1.794048,
+          "mean": 0.15681242417962005,
+          "sample_sd": 0.1305250933560773
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2895,
+          "min": 0.187,
+          "median": 0.2835,
+          "p95": 0.4243599999999997,
+          "max": 1.7906,
+          "mean": 0.3204431778929188,
+          "sample_sd": 0.13353334493549743
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9997124,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 7,
+        "end_seconds": 8,
+        "polls": 3015,
+        "returned_polls": 3015,
+        "accepted_unique_samples": 2833,
+        "excluded_polls": 182,
+        "gpu_zero_polls": 182,
+        "excluded_poll_fraction": 0.06036484245439469,
+        "gpu_zero_poll_fraction": 0.06036484245439469,
+        "nonzero_timestamp_ids_observed": 3015,
+        "ids_ever_gpu_zero": 182,
+        "ids_without_any_positive_gpu_return": 182,
+        "unique_id_gpu_unavailable_fraction": 0.06036484245439469,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3015,
+        "focus_true_accepted": 2833,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 182
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2833,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.34816,
+          "max": 1.345536,
+          "mean": 0.1617685958348041,
+          "sample_sd": 0.1212063867058536
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2833,
+          "min": 0.1893,
+          "median": 0.2869,
+          "p95": 0.44822,
+          "max": 1.5358,
+          "mean": 0.32986166607836215,
+          "sample_sd": 0.13051181862642938
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 1.0000179,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 8,
+        "end_seconds": 9,
+        "polls": 3064,
+        "returned_polls": 3064,
+        "accepted_unique_samples": 2882,
+        "excluded_polls": 182,
+        "gpu_zero_polls": 182,
+        "excluded_poll_fraction": 0.05939947780678851,
+        "gpu_zero_poll_fraction": 0.05939947780678851,
+        "nonzero_timestamp_ids_observed": 3064,
+        "ids_ever_gpu_zero": 182,
+        "ids_without_any_positive_gpu_return": 182,
+        "unique_id_gpu_unavailable_fraction": 0.05939947780678851,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3064,
+        "focus_true_accepted": 2882,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 182
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2882,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.3460607999999998,
+          "max": 1.683456,
+          "mean": 0.15904581818181818,
+          "sample_sd": 0.1241902478629401
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2882,
+          "min": 0.1915,
+          "median": 0.285,
+          "p95": 0.42414999999999986,
+          "max": 1.5545,
+          "mean": 0.32372578070784175,
+          "sample_sd": 0.12447471485742954
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9997402,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 9,
+        "end_seconds": 10,
+        "polls": 3143,
+        "returned_polls": 3143,
+        "accepted_unique_samples": 2892,
+        "excluded_polls": 251,
+        "gpu_zero_polls": 251,
+        "excluded_poll_fraction": 0.07986000636334713,
+        "gpu_zero_poll_fraction": 0.07986000636334713,
+        "nonzero_timestamp_ids_observed": 3143,
+        "ids_ever_gpu_zero": 251,
+        "ids_without_any_positive_gpu_return": 251,
+        "unique_id_gpu_unavailable_fraction": 0.07986000636334713,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3143,
+        "focus_true_accepted": 2892,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 251
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2892,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.346112,
+          "max": 1.374208,
+          "mean": 0.15517813554633472,
+          "sample_sd": 0.12439681232723947
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2892,
+          "min": 0.1839,
+          "median": 0.2822,
+          "p95": 0.4242249999999999,
+          "max": 1.6822,
+          "mean": 0.31717150760719226,
+          "sample_sd": 0.1334563187135595
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9995058,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 10,
+        "end_seconds": 11,
+        "polls": 3052,
+        "returned_polls": 3052,
+        "accepted_unique_samples": 2837,
+        "excluded_polls": 215,
+        "gpu_zero_polls": 215,
+        "excluded_poll_fraction": 0.07044560943643513,
+        "gpu_zero_poll_fraction": 0.07044560943643513,
+        "nonzero_timestamp_ids_observed": 3052,
+        "ids_ever_gpu_zero": 215,
+        "ids_without_any_positive_gpu_return": 215,
+        "unique_id_gpu_unavailable_fraction": 0.07044560943643513,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3052,
+        "focus_true_accepted": 2837,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 215
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2837,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.3463167999999998,
+          "max": 1.383424,
+          "mean": 0.15795335354247445,
+          "sample_sd": 0.11918075278944683
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2837,
+          "min": 0.1851,
+          "median": 0.286,
+          "p95": 0.42695999999999984,
+          "max": 1.815,
+          "mean": 0.326173563623546,
+          "sample_sd": 0.12842301895433497
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9994921,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 11,
+        "end_seconds": 12,
+        "polls": 3076,
+        "returned_polls": 3076,
+        "accepted_unique_samples": 2867,
+        "excluded_polls": 209,
+        "gpu_zero_polls": 209,
+        "excluded_poll_fraction": 0.06794538361508452,
+        "gpu_zero_poll_fraction": 0.06794538361508452,
+        "nonzero_timestamp_ids_observed": 3076,
+        "ids_ever_gpu_zero": 209,
+        "ids_without_any_positive_gpu_return": 209,
+        "unique_id_gpu_unavailable_fraction": 0.06794538361508452,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3076,
+        "focus_true_accepted": 2867,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 209
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2867,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.345088,
+          "max": 1.577984,
+          "mean": 0.15531851273107777,
+          "sample_sd": 0.12386936056488329
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2867,
+          "min": 0.1896,
+          "median": 0.2839,
+          "p95": 0.4234799999999999,
+          "max": 1.6309,
+          "mean": 0.32393501918381584,
+          "sample_sd": 0.13140051788525905
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9999776,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 12,
+        "end_seconds": 13,
+        "polls": 3155,
+        "returned_polls": 3155,
+        "accepted_unique_samples": 2953,
+        "excluded_polls": 202,
+        "gpu_zero_polls": 202,
+        "excluded_poll_fraction": 0.06402535657686212,
+        "gpu_zero_poll_fraction": 0.06402535657686212,
+        "nonzero_timestamp_ids_observed": 3155,
+        "ids_ever_gpu_zero": 202,
+        "ids_without_any_positive_gpu_return": 202,
+        "unique_id_gpu_unavailable_fraction": 0.06402535657686212,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3155,
+        "focus_true_accepted": 2953,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 202
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2953,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.346112,
+          "max": 1.71008,
+          "mean": 0.15527912766677954,
+          "sample_sd": 0.12645193767020904
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2953,
+          "min": 0.1861,
+          "median": 0.2816,
+          "p95": 0.4182,
+          "max": 1.8778,
+          "mean": 0.31619376904842533,
+          "sample_sd": 0.12819173011483298
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 1.0000868,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 13,
+        "end_seconds": 14,
+        "polls": 3153,
+        "returned_polls": 3153,
+        "accepted_unique_samples": 2910,
+        "excluded_polls": 243,
+        "gpu_zero_polls": 243,
+        "excluded_poll_fraction": 0.07706945765937202,
+        "gpu_zero_poll_fraction": 0.07706945765937202,
+        "nonzero_timestamp_ids_observed": 3153,
+        "ids_ever_gpu_zero": 243,
+        "ids_without_any_positive_gpu_return": 243,
+        "unique_id_gpu_unavailable_fraction": 0.07706945765937202,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3153,
+        "focus_true_accepted": 2910,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 243
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2910,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.344064,
+          "max": 1.568768,
+          "mean": 0.15635081237113402,
+          "sample_sd": 0.12524453911024475
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2910,
+          "min": 0.1871,
+          "median": 0.2828,
+          "p95": 0.4166249999999996,
+          "max": 1.6799,
+          "mean": 0.31470628865979383,
+          "sample_sd": 0.12455575995330243
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9993853,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 14,
+        "end_seconds": 15,
+        "polls": 3048,
+        "returned_polls": 3048,
+        "accepted_unique_samples": 2844,
+        "excluded_polls": 204,
+        "gpu_zero_polls": 204,
+        "excluded_poll_fraction": 0.06692913385826772,
+        "gpu_zero_poll_fraction": 0.06692913385826772,
+        "nonzero_timestamp_ids_observed": 3048,
+        "ids_ever_gpu_zero": 204,
+        "ids_without_any_positive_gpu_return": 204,
+        "unique_id_gpu_unavailable_fraction": 0.06692913385826772,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3048,
+        "focus_true_accepted": 2844,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 204
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2844,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.346112,
+          "max": 1.477632,
+          "mean": 0.1587394430379747,
+          "sample_sd": 0.1261948775362827
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2844,
+          "min": 0.187,
+          "median": 0.2854,
+          "p95": 0.4263949999999999,
+          "max": 1.5147,
+          "mean": 0.32741627988748245,
+          "sample_sd": 0.13552719647197387
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9998752,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 15,
+        "end_seconds": 16,
+        "polls": 3154,
+        "returned_polls": 3154,
+        "accepted_unique_samples": 2939,
+        "excluded_polls": 215,
+        "gpu_zero_polls": 215,
+        "excluded_poll_fraction": 0.06816740646797717,
+        "gpu_zero_poll_fraction": 0.06816740646797717,
+        "nonzero_timestamp_ids_observed": 3154,
+        "ids_ever_gpu_zero": 215,
+        "ids_without_any_positive_gpu_return": 215,
+        "unique_id_gpu_unavailable_fraction": 0.06816740646797717,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3154,
+        "focus_true_accepted": 2939,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 215
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2939,
+          "min": 0.09728,
+          "median": 0.106496,
+          "p95": 0.3441663999999999,
+          "max": 16652448062250.152,
+          "mean": 16998075599.324457,
+          "sample_sd": 531852312636.6661
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2939,
+          "min": 0.1872,
+          "median": 0.283,
+          "p95": 0.41331,
+          "max": 1.4416,
+          "mean": 0.31571221503912894,
+          "sample_sd": 0.12548436803304838
+        },
+        "gpu_duration_exceeds_application_lifetime": [
+          {
+            "poll_index": 55755,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122698771623",
+            "gpu_frame_time_ms": 16652448062250.152,
+            "application_realtime_ms_at_poll": 21024.249500623584,
+            "runtime_accepted": true
+          },
+          {
+            "poll_index": 56339,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122700572626",
+            "gpu_frame_time_ms": 16652448062070.055,
+            "application_realtime_ms_at_poll": 21204.358700623587,
+            "runtime_accepted": true
+          },
+          {
+            "poll_index": 57669,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122704782669",
+            "gpu_frame_time_ms": 16652448061649.082,
+            "application_realtime_ms_at_poll": 21625.028900623583,
+            "runtime_accepted": true
+          }
+        ],
+        "gpu_mean_sd_interpretation": "Uninterpretable as rendering cost: raw policy-accepted returns include impossible positive durations",
+        "accepted_cpu_clock_span_seconds": 0.9997954,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 16,
+        "end_seconds": 17,
+        "polls": 3060,
+        "returned_polls": 3060,
+        "accepted_unique_samples": 2899,
+        "excluded_polls": 161,
+        "gpu_zero_polls": 161,
+        "excluded_poll_fraction": 0.05261437908496732,
+        "gpu_zero_poll_fraction": 0.05261437908496732,
+        "nonzero_timestamp_ids_observed": 3060,
+        "ids_ever_gpu_zero": 161,
+        "ids_without_any_positive_gpu_return": 161,
+        "unique_id_gpu_unavailable_fraction": 0.05261437908496732,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3060,
+        "focus_true_accepted": 2899,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 161
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2899,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.347136,
+          "max": 1.25952,
+          "mean": 0.1581887492238703,
+          "sample_sd": 0.12297405405379364
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2899,
+          "min": 0.189,
+          "median": 0.2849,
+          "p95": 0.41971,
+          "max": 1.954,
+          "mean": 0.32459110037944117,
+          "sample_sd": 0.12989316689840844
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 0.9983468,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 17,
+        "end_seconds": 18,
+        "polls": 3085,
+        "returned_polls": 3085,
+        "accepted_unique_samples": 2828,
+        "excluded_polls": 257,
+        "gpu_zero_polls": 257,
+        "excluded_poll_fraction": 0.0833063209076175,
+        "gpu_zero_poll_fraction": 0.0833063209076175,
+        "nonzero_timestamp_ids_observed": 3085,
+        "ids_ever_gpu_zero": 257,
+        "ids_without_any_positive_gpu_return": 257,
+        "unique_id_gpu_unavailable_fraction": 0.0833063209076175,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3085,
+        "focus_true_accepted": 2828,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 257
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2828,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.347136,
+          "max": 16652448059903.309,
+          "mean": 5888418691.777527,
+          "sample_sd": 313139883146.7744
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2828,
+          "min": 0.1886,
+          "median": 0.28465,
+          "p95": 0.43259000000000003,
+          "max": 1.7755,
+          "mean": 0.32343645685997174,
+          "sample_sd": 0.1356223872550562
+        },
+        "gpu_duration_exceeds_application_lifetime": [
+          {
+            "poll_index": 62997,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122722240965",
+            "gpu_frame_time_ms": 16652448059903.309,
+            "application_realtime_ms_at_poll": 23371.035500623584,
+            "runtime_accepted": true
+          }
+        ],
+        "gpu_mean_sd_interpretation": "Uninterpretable as rendering cost: raw policy-accepted returns include impossible positive durations",
+        "accepted_cpu_clock_span_seconds": 0.9985101,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 18,
+        "end_seconds": 19,
+        "polls": 3032,
+        "returned_polls": 3032,
+        "accepted_unique_samples": 2860,
+        "excluded_polls": 172,
+        "gpu_zero_polls": 172,
+        "excluded_poll_fraction": 0.05672823218997362,
+        "gpu_zero_poll_fraction": 0.05672823218997362,
+        "nonzero_timestamp_ids_observed": 3032,
+        "ids_ever_gpu_zero": 172,
+        "ids_without_any_positive_gpu_return": 172,
+        "unique_id_gpu_unavailable_fraction": 0.05672823218997362,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3032,
+        "focus_true_accepted": 2860,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 172
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2860,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.34816,
+          "max": 16652448058833.957,
+          "mean": 5822534286.470592,
+          "sample_sd": 311383123777.5766
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2860,
+          "min": 0.1898,
+          "median": 0.2872,
+          "p95": 0.4221899999999995,
+          "max": 1.7413,
+          "mean": 0.3292466783216783,
+          "sample_sd": 0.1350707879628709
+        },
+        "gpu_duration_exceeds_application_lifetime": [
+          {
+            "poll_index": 66302,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122732934532",
+            "gpu_frame_time_ms": 16652448058833.957,
+            "application_realtime_ms_at_poll": 24440.352200623587,
+            "runtime_accepted": true
+          }
+        ],
+        "gpu_mean_sd_interpretation": "Uninterpretable as rendering cost: raw policy-accepted returns include impossible positive durations",
+        "accepted_cpu_clock_span_seconds": 1.000012,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 19,
+        "end_seconds": 20,
+        "polls": 3126,
+        "returned_polls": 3126,
+        "accepted_unique_samples": 2930,
+        "excluded_polls": 196,
+        "gpu_zero_polls": 196,
+        "excluded_poll_fraction": 0.06269993602047345,
+        "gpu_zero_poll_fraction": 0.06269993602047345,
+        "nonzero_timestamp_ids_observed": 3126,
+        "ids_ever_gpu_zero": 196,
+        "ids_without_any_positive_gpu_return": 196,
+        "unique_id_gpu_unavailable_fraction": 0.06269993602047345,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 3126,
+        "focus_true_accepted": 2930,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 196
+        },
+        "gpu_whole_frame_ms": {
+          "count": 2930,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.345088,
+          "max": 1.317888,
+          "mean": 0.1570240218430034,
+          "sample_sd": 0.12451341822357492
+        },
+        "cpu_whole_frame_ms": {
+          "count": 2930,
+          "min": 0.1856,
+          "median": 0.2832,
+          "p95": 0.42062999999999984,
+          "max": 1.5291,
+          "mean": 0.3196132423208191,
+          "sample_sd": 0.12721272435046388
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 1.0005138,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      }
+    ]
+  },
+  "five_second_blocks": {
+    "clock": "poll realtime; not delayed timing source-frame time",
+    "outside_interval_rows_assigned_to_end_blocks": 0,
+    "blocks": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "polls": 15300,
+        "returned_polls": 15300,
+        "accepted_unique_samples": 14438,
+        "excluded_polls": 862,
+        "gpu_zero_polls": 862,
+        "excluded_poll_fraction": 0.05633986928104575,
+        "gpu_zero_poll_fraction": 0.05633986928104575,
+        "nonzero_timestamp_ids_observed": 15300,
+        "ids_ever_gpu_zero": 862,
+        "ids_without_any_positive_gpu_return": 862,
+        "unique_id_gpu_unavailable_fraction": 0.05633986928104575,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 15300,
+        "focus_true_accepted": 14438,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 862
+        },
+        "gpu_whole_frame_ms": {
+          "count": 14438,
+          "min": 0.09728,
+          "median": 0.106496,
+          "p95": 0.345088,
+          "max": 16652448076510.7,
+          "mean": 1153376373.3778124,
+          "sample_sd": 138587662393.42578
+        },
+        "cpu_whole_frame_ms": {
+          "count": 14438,
+          "min": 0.1855,
+          "median": 0.2849,
+          "p95": 0.427815,
+          "max": 1.7258,
+          "mean": 0.32519274830308903,
+          "sample_sd": 0.12879324932466
+        },
+        "gpu_duration_exceeds_application_lifetime": [
+          {
+            "poll_index": 11937,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122556163845",
+            "gpu_frame_time_ms": 16652448076510.7,
+            "application_realtime_ms_at_poll": 6763.380400623584,
+            "runtime_accepted": true
+          }
+        ],
+        "gpu_mean_sd_interpretation": "Uninterpretable as rendering cost: raw policy-accepted returns include impossible positive durations",
+        "accepted_cpu_clock_span_seconds": 5.0014612,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 5,
+        "end_seconds": 10,
+        "polls": 15423,
+        "returned_polls": 15423,
+        "accepted_unique_samples": 14391,
+        "excluded_polls": 1032,
+        "gpu_zero_polls": 1032,
+        "excluded_poll_fraction": 0.06691305193542113,
+        "gpu_zero_poll_fraction": 0.06691305193542113,
+        "nonzero_timestamp_ids_observed": 15423,
+        "ids_ever_gpu_zero": 1032,
+        "ids_without_any_positive_gpu_return": 1032,
+        "unique_id_gpu_unavailable_fraction": 0.06691305193542113,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 15423,
+        "focus_true_accepted": 14391,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 1032
+        },
+        "gpu_whole_frame_ms": {
+          "count": 14391,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.345088,
+          "max": 1.794048,
+          "mean": 0.15824103397957057,
+          "sample_sd": 0.12595444220302024
+        },
+        "cpu_whole_frame_ms": {
+          "count": 14391,
+          "min": 0.1839,
+          "median": 0.2843,
+          "p95": 0.4297,
+          "max": 1.8357,
+          "mean": 0.3229112292404976,
+          "sample_sd": 0.13162649908874582
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 4.9995557,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 10,
+        "end_seconds": 15,
+        "polls": 15484,
+        "returned_polls": 15484,
+        "accepted_unique_samples": 14411,
+        "excluded_polls": 1073,
+        "gpu_zero_polls": 1073,
+        "excluded_poll_fraction": 0.0692973391888401,
+        "gpu_zero_poll_fraction": 0.0692973391888401,
+        "nonzero_timestamp_ids_observed": 15484,
+        "ids_ever_gpu_zero": 1073,
+        "ids_without_any_positive_gpu_return": 1073,
+        "unique_id_gpu_unavailable_fraction": 0.0692973391888401,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 15484,
+        "focus_true_accepted": 14411,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 1073
+        },
+        "gpu_whole_frame_ms": {
+          "count": 14411,
+          "min": 0.098304,
+          "median": 0.106496,
+          "p95": 0.346112,
+          "max": 1.71008,
+          "mean": 0.15671271556449934,
+          "sample_sd": 0.1242310588546141
+        },
+        "cpu_whole_frame_ms": {
+          "count": 14411,
+          "min": 0.1851,
+          "median": 0.2839,
+          "p95": 0.4222,
+          "max": 1.8778,
+          "mean": 0.3216128998681563,
+          "sample_sd": 0.12972864594567232
+        },
+        "gpu_duration_exceeds_application_lifetime": [],
+        "gpu_mean_sd_interpretation": "Descriptive, conditional on runtime-valid returns only",
+        "accepted_cpu_clock_span_seconds": 4.9998086,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      },
+      {
+        "start_seconds": 15,
+        "end_seconds": 20,
+        "polls": 15457,
+        "returned_polls": 15457,
+        "accepted_unique_samples": 14456,
+        "excluded_polls": 1001,
+        "gpu_zero_polls": 1001,
+        "excluded_poll_fraction": 0.06476030277544155,
+        "gpu_zero_poll_fraction": 0.06476030277544155,
+        "nonzero_timestamp_ids_observed": 15457,
+        "ids_ever_gpu_zero": 1001,
+        "ids_without_any_positive_gpu_return": 1001,
+        "unique_id_gpu_unavailable_fraction": 0.06476030277544155,
+        "zero_then_positive_ids": [],
+        "focus_true_polls": 15457,
+        "focus_true_accepted": 14456,
+        "rejection_counts": {
+          "gpu_not_positive_finite": 1001
+        },
+        "gpu_whole_frame_ms": {
+          "count": 14456,
+          "min": 0.09728,
+          "median": 0.106496,
+          "p95": 0.347136,
+          "max": 16652448062250.152,
+          "mean": 5759701183.383093,
+          "sample_sd": 309655588740.18286
+        },
+        "cpu_whole_frame_ms": {
+          "count": 14456,
+          "min": 0.1856,
+          "median": 0.2844,
+          "p95": 0.422525,
+          "max": 1.954,
+          "mean": 0.32247221914775875,
+          "sample_sd": 0.13072503461360852
+        },
+        "gpu_duration_exceeds_application_lifetime": [
+          {
+            "poll_index": 55755,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122698771623",
+            "gpu_frame_time_ms": 16652448062250.152,
+            "application_realtime_ms_at_poll": 21024.249500623584,
+            "runtime_accepted": true
+          },
+          {
+            "poll_index": 56339,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122700572626",
+            "gpu_frame_time_ms": 16652448062070.055,
+            "application_realtime_ms_at_poll": 21204.358700623587,
+            "runtime_accepted": true
+          },
+          {
+            "poll_index": 57669,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122704782669",
+            "gpu_frame_time_ms": 16652448061649.082,
+            "application_realtime_ms_at_poll": 21625.028900623583,
+            "runtime_accepted": true
+          },
+          {
+            "poll_index": 62997,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122722240965",
+            "gpu_frame_time_ms": 16652448059903.309,
+            "application_realtime_ms_at_poll": 23371.035500623584,
+            "runtime_accepted": true
+          },
+          {
+            "poll_index": 66302,
+            "phase": "measurement",
+            "frame_start_timestamp": "6122732934532",
+            "gpu_frame_time_ms": 16652448058833.957,
+            "application_realtime_ms_at_poll": 24440.352200623587,
+            "runtime_accepted": true
+          }
+        ],
+        "gpu_mean_sd_interpretation": "Uninterpretable as rendering cost: raw policy-accepted returns include impossible positive durations",
+        "accepted_cpu_clock_span_seconds": 4.9995611,
+        "timestamp_id_scope": "Nonzero IDs actually returned by latest-one API, not all rendered frames"
+      }
+    ]
+  },
+  "telemetry": {
+    "status": "recorded",
+    "rows": 32,
+    "fields": [
+      "timestamp",
+      " pstate",
+      " utilization.gpu [%]",
+      " clocks.current.graphics [MHz]",
+      " clocks.current.memory [MHz]",
+      " temperature.gpu",
+      " power.draw [W]"
+    ],
+    "metrics": {
+      " utilization.gpu [%]": {
+        "count": 32,
+        "min": 2.0,
+        "median": 63.5,
+        "p95": 67.0,
+        "max": 67.0,
+        "mean": 53.59375,
+        "sample_sd": 22.233162349619008,
+        "unparsed_or_missing_rows": 0
+      },
+      " clocks.current.graphics [MHz]": {
+        "count": 32,
+        "min": 210.0,
+        "median": 2790.0,
+        "p95": 2796.75,
+        "max": 2805.0,
+        "mean": 2532.65625,
+        "sample_sd": 723.7714667550177,
+        "unparsed_or_missing_rows": 0
+      },
+      " clocks.current.memory [MHz]": {
+        "count": 32,
+        "min": 405.0,
+        "median": 10501.0,
+        "p95": 10501.0,
+        "max": 10501.0,
+        "mean": 9579.8125,
+        "sample_sd": 2910.5226937453094,
+        "unparsed_or_missing_rows": 0
+      },
+      " temperature.gpu": {
+        "count": 32,
+        "min": 44.0,
+        "median": 55.5,
+        "p95": 60.0,
+        "max": 60.0,
+        "mean": 53.71875,
+        "sample_sd": 5.419405841733885,
+        "unparsed_or_missing_rows": 0
+      },
+      " power.draw [W]": {
+        "count": 32,
+        "min": 15.46,
+        "median": 106.915,
+        "p95": 109.1425,
+        "max": 109.24,
+        "mean": 86.94874999999999,
+        "sample_sd": 34.24677943417313,
+        "unparsed_or_missing_rows": 0
+      }
+    },
+    "scope": "Whole GPU with ambient applications over the process, including startup/warmup/measurement. Not an exact measurement-window trace or Player-only attribution; timestamp timezone is unconfirmed and not aligned to source frames."
+  },
+  "ready": {
+    "utc": "2026-11-10T07:33:15.3530949Z",
+    "unityVersion": "6000.6.5f1",
+    "platform": "WindowsPlayer",
+    "operatingSystem": "Windows 10  (10.0.19045) 64bit",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "graphicsVersion": "Direct3D 11.0 [level 11.1]",
+    "graphicsAPI": "Direct3D11",
+    "renderingThreadingMode": "LegacyJobified",
+    "activeColorSpace": "Linear",
+    "cpuTimerFrequencyDiagnostic": "10000000",
+    "gpuTimerFrequencyDiagnostic": "1000000000",
+    "pipeline": "PCF_Baseline_URP",
+    "expectedPreset": "High",
+    "lightShadows": "Soft",
+    "perLightQuality": "High",
+    "cameraAntialiasing": "None",
+    "focused": true,
+    "runInBackground": true,
+    "timingFeatureEnabled": true,
+    "supportsGpuRecorder": true,
+    "mainLightShadowKeyword": true,
+    "softShadowKeyword": true,
+    "cameraHDR": false,
+    "cameraMSAA": false,
+    "cameraDynamicResolution": false,
+    "cameraPostProcessing": false,
+    "usesPipelineBias": true,
+    "realtimeSeconds": 5.725557300623583,
+    "screenWidth": 1920,
+    "screenHeight": 1080,
+    "cameraPixelWidth": 1920,
+    "cameraPixelHeight": 1080,
+    "vSyncCount": 0,
+    "targetFrameRate": -1,
+    "msaaSamples": 1,
+    "mainShadowResolution": 2048,
+    "cascades": 1,
+    "renderScale": 1.0,
+    "shadowDistance": 50.0,
+    "pipelineDepthBiasInput": 0.10000000149011612,
+    "pipelineNormalBiasInput": 0.5,
+    "cameraFOV": 45.0,
+    "lightStrength": 1.0,
+    "cameraPosition": {
+      "x": 8.0,
+      "y": 7.0,
+      "z": -11.0
+    },
+    "cameraRotation": {
+      "x": 23.964643478393555,
+      "y": 325.63720703125,
+      "z": -4.671575482007029e-07
+    },
+    "lightRotation": {
+      "x": 45.0,
+      "y": 145.0,
+      "z": 1.2074183359800372e-06
+    },
+    "mainLightShadowParams": {
+      "x": 1.0,
+      "y": 3.0,
+      "z": 0.0019616957288235426,
+      "w": -3.9042391777038574
+    },
+    "mainLightShadowmapSize": {
+      "x": 0.00048828125,
+      "y": 0.00048828125,
+      "z": 2048.0,
+      "w": 2048.0
+    },
+    "shadowBiasGlobalDiagnostic": {
+      "x": -0.014669103547930717,
+      "y": -0.07334551215171814,
+      "z": 1.0,
+      "w": 0.0
+    }
+  },
+  "final": {
+    "utc": "2026-11-10T07:33:35.3557469Z",
+    "unityVersion": "6000.6.5f1",
+    "platform": "WindowsPlayer",
+    "operatingSystem": "Windows 10  (10.0.19045) 64bit",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "graphicsVersion": "Direct3D 11.0 [level 11.1]",
+    "graphicsAPI": "Direct3D11",
+    "renderingThreadingMode": "LegacyJobified",
+    "activeColorSpace": "Linear",
+    "cpuTimerFrequencyDiagnostic": "10000000",
+    "gpuTimerFrequencyDiagnostic": "1000000000",
+    "pipeline": "PCF_Baseline_URP",
+    "expectedPreset": "High",
+    "lightShadows": "Soft",
+    "perLightQuality": "High",
+    "cameraAntialiasing": "None",
+    "focused": true,
+    "runInBackground": true,
+    "timingFeatureEnabled": true,
+    "supportsGpuRecorder": true,
+    "mainLightShadowKeyword": true,
+    "softShadowKeyword": true,
+    "cameraHDR": false,
+    "cameraMSAA": false,
+    "cameraDynamicResolution": false,
+    "cameraPostProcessing": false,
+    "usesPipelineBias": true,
+    "realtimeSeconds": 25.727746200623585,
+    "screenWidth": 1920,
+    "screenHeight": 1080,
+    "cameraPixelWidth": 1920,
+    "cameraPixelHeight": 1080,
+    "vSyncCount": 0,
+    "targetFrameRate": -1,
+    "msaaSamples": 1,
+    "mainShadowResolution": 2048,
+    "cascades": 1,
+    "renderScale": 1.0,
+    "shadowDistance": 50.0,
+    "pipelineDepthBiasInput": 0.10000000149011612,
+    "pipelineNormalBiasInput": 0.5,
+    "cameraFOV": 45.0,
+    "lightStrength": 1.0,
+    "cameraPosition": {
+      "x": 8.0,
+      "y": 7.0,
+      "z": -11.0
+    },
+    "cameraRotation": {
+      "x": 23.964643478393555,
+      "y": 325.63720703125,
+      "z": -4.671575482007029e-07
+    },
+    "lightRotation": {
+      "x": 45.0,
+      "y": 145.0,
+      "z": 1.2074183359800372e-06
+    },
+    "mainLightShadowParams": {
+      "x": 1.0,
+      "y": 3.0,
+      "z": 0.0019616957288235426,
+      "w": -3.9042391777038574
+    },
+    "mainLightShadowmapSize": {
+      "x": 0.00048828125,
+      "y": 0.00048828125,
+      "z": 2048.0,
+      "w": 2048.0
+    },
+    "shadowBiasGlobalDiagnostic": {
+      "x": -0.014669103547930717,
+      "y": -0.07334551215171814,
+      "z": 1.0,
+      "w": 0.0
+    }
+  }
+}

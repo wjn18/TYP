@@ -1,0 +1,10 @@
+{
+  "recordedDate": "2026-11-10",
+  "nature": "Post-observation diagnostic, added after longer windows exposed impossible positive finite GPU durations; not the pre-execution acceptance protocol",
+  "runtimePolicy": "Accepted means measurement phase, nonzero unique increasing timestamp, positive finite CPU/GPU durations, recorded controls valid. Raw acceptance flags are preserved.",
+  "sanityDiagnostic": "Flag any positive finite GPU duration in milliseconds greater than observation realtime_seconds * 1000 (the elapsed application time at observation).",
+  "rationale": "The observed approximately 1.665e13 millisecond durations exceed the entire short-lived Player process by many orders of magnitude and cannot represent its rendered frames. No arbitrary percentile trim or perceptual threshold is applied.",
+  "rawRetention": "No source rows, values, timestamps or original accepted flags are removed or overwritten.",
+  "interpretation": "Collection/data consistency may pass while GPU timing reliability remains unestablished. Preliminary GPU mean/SD cannot be rendering-cost estimates. Equal medians do not invalidate the anomaly evidence.",
+  "futureWork": "Cross-check an independently validated timing path and review the source of invalid values before freezing a benchmark validity policy. This diagnostic does not identify or repair the underlying API/driver cause."
+}
