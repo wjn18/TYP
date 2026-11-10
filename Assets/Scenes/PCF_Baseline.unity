@@ -721,6 +721,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1195959804}
   - component: {fileID: 1195959803}
+  - component: {fileID: 1195959805}
+  - component: {fileID: 1195959806}
   m_Layer: 0
   m_Name: Experiment Settings
   m_TagString: Untagged
@@ -757,6 +759,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1195959805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195959802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff10b8de1d75e4f41b33b5e6bb12ff27, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::TYP.Experiments.NativeBaselineRunner
+  mainLight: {fileID: 265407787}
+  captureCamera: {fileID: 924839167}
+  defaultPreset: 3
+  settlingFrames: 30
+  expectedPipelineName: PCF_Baseline_URP
+--- !u!114 &1195959806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195959802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ccf28489de6b8f478a0a1cde42844ee, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::TYP.Experiments.FrameTimingSmokeProbe
 --- !u!1 &1443329136
 GameObject:
   m_ObjectHideFlags: 0

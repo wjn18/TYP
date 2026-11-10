@@ -1,0 +1,21 @@
+{
+    "startedUtc": "2026-11-10T03:10:32.1151528Z",
+    "endedUtc": "2026-11-10T03:10:32.7318074Z",
+    "state": "completed",
+    "error": "",
+    "requestedOrder": [
+        "High",
+        "Hard",
+        "Low",
+        "Medium",
+        "High_repeat"
+    ],
+    "completedCaptures": [
+        "High",
+        "Hard",
+        "Low",
+        "Medium",
+        "High_repeat"
+    ],
+    "notes": "Diagnostic screenshot/configuration suite only; no performance measurements or algorithm equivalence claims. Native preset differences include filter and effective bias changes. High_repeat checks image reproducibility."
+}

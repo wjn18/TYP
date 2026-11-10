@@ -1,0 +1,202 @@
+{
+  "run": "High_03",
+  "directory": "F:\\WorkingFiles\\TYP\\TYP\\Measurements\\FrameTiming\\2026-11-10\\High_03",
+  "validation": "passed",
+  "raw_observations": 11809,
+  "phase_counts": {
+    "warmup": 10681,
+    "drain": 8,
+    "measurement": 1120
+  },
+  "measurement_polls": 1120,
+  "accepted_unique_samples": 1000,
+  "measurement_exclusions": {
+    "gpu_not_positive_finite": 120
+  },
+  "all_phases_empty_returns": 4,
+  "accepted_focused_samples": 1000,
+  "gpu_whole_frame_ms": {
+    "count": 1000,
+    "min": 0.09728,
+    "median": 0.103424,
+    "p95": 0.10752,
+    "max": 0.466944,
+    "mean": 0.105377024,
+    "sd": 0.02291787397039147
+  },
+  "cpu_whole_frame_ms": {
+    "count": 1000,
+    "min": 0.1996,
+    "median": 0.24525,
+    "p95": 0.3445349999999999,
+    "max": 1.1128,
+    "mean": 0.26269629999999994,
+    "sd": 0.06485706449666932
+  },
+  "measurement_elapsed_seconds": 0.29513680000000075,
+  "accepted_cpu_clock_span_ms": 295.7234,
+  "source_tick_identity": "frameStartTimestamp, raw CPU clock ticks; duration fields already milliseconds",
+  "ready": {
+    "utc": "2026-11-10T03:50:23.1014367Z",
+    "unityVersion": "6000.6.5f1",
+    "platform": "WindowsPlayer",
+    "operatingSystem": "Windows 10  (10.0.19045) 64bit",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "graphicsVersion": "Direct3D 11.0 [level 11.1]",
+    "graphicsAPI": "Direct3D11",
+    "renderingThreadingMode": "LegacyJobified",
+    "activeColorSpace": "Linear",
+    "cpuTimerFrequencyDiagnostic": "10000000",
+    "gpuTimerFrequencyDiagnostic": "1000000000",
+    "pipeline": "PCF_Baseline_URP",
+    "expectedPreset": "High",
+    "lightShadows": "Soft",
+    "perLightQuality": "High",
+    "cameraAntialiasing": "None",
+    "focused": true,
+    "runInBackground": true,
+    "timingFeatureEnabled": true,
+    "supportsGpuRecorder": true,
+    "mainLightShadowKeyword": true,
+    "softShadowKeyword": true,
+    "cameraHDR": false,
+    "cameraMSAA": false,
+    "cameraDynamicResolution": false,
+    "cameraPostProcessing": false,
+    "usesPipelineBias": true,
+    "realtimeSeconds": 5.704808601360544,
+    "screenWidth": 1920,
+    "screenHeight": 1080,
+    "cameraPixelWidth": 1920,
+    "cameraPixelHeight": 1080,
+    "vSyncCount": 0,
+    "targetFrameRate": -1,
+    "msaaSamples": 1,
+    "mainShadowResolution": 2048,
+    "cascades": 1,
+    "renderScale": 1.0,
+    "shadowDistance": 50.0,
+    "pipelineDepthBiasInput": 0.10000000149011612,
+    "pipelineNormalBiasInput": 0.5,
+    "cameraFOV": 45.0,
+    "lightStrength": 1.0,
+    "cameraPosition": {
+      "x": 8.0,
+      "y": 7.0,
+      "z": -11.0
+    },
+    "cameraRotation": {
+      "x": 23.964643478393555,
+      "y": 325.63720703125,
+      "z": -4.671575482007029e-07
+    },
+    "lightRotation": {
+      "x": 45.0,
+      "y": 145.0,
+      "z": 1.2074183359800372e-06
+    },
+    "mainLightShadowParams": {
+      "x": 1.0,
+      "y": 3.0,
+      "z": 0.0019616957288235426,
+      "w": -3.9042391777038574
+    },
+    "mainLightShadowmapSize": {
+      "x": 0.00048828125,
+      "y": 0.00048828125,
+      "z": 2048.0,
+      "w": 2048.0
+    },
+    "shadowBiasGlobalDiagnostic": {
+      "x": -0.014669103547930717,
+      "y": -0.07334551215171814,
+      "z": 1.0,
+      "w": 0.0
+    }
+  },
+  "final": {
+    "utc": "2026-11-10T03:50:23.3982605Z",
+    "unityVersion": "6000.6.5f1",
+    "platform": "WindowsPlayer",
+    "operatingSystem": "Windows 10  (10.0.19045) 64bit",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "graphicsVersion": "Direct3D 11.0 [level 11.1]",
+    "graphicsAPI": "Direct3D11",
+    "renderingThreadingMode": "LegacyJobified",
+    "activeColorSpace": "Linear",
+    "cpuTimerFrequencyDiagnostic": "10000000",
+    "gpuTimerFrequencyDiagnostic": "1000000000",
+    "pipeline": "PCF_Baseline_URP",
+    "expectedPreset": "High",
+    "lightShadows": "Soft",
+    "perLightQuality": "High",
+    "cameraAntialiasing": "None",
+    "focused": true,
+    "runInBackground": true,
+    "timingFeatureEnabled": true,
+    "supportsGpuRecorder": true,
+    "mainLightShadowKeyword": true,
+    "softShadowKeyword": true,
+    "cameraHDR": false,
+    "cameraMSAA": false,
+    "cameraDynamicResolution": false,
+    "cameraPostProcessing": false,
+    "usesPipelineBias": true,
+    "realtimeSeconds": 6.0011918013605445,
+    "screenWidth": 1920,
+    "screenHeight": 1080,
+    "cameraPixelWidth": 1920,
+    "cameraPixelHeight": 1080,
+    "vSyncCount": 0,
+    "targetFrameRate": -1,
+    "msaaSamples": 1,
+    "mainShadowResolution": 2048,
+    "cascades": 1,
+    "renderScale": 1.0,
+    "shadowDistance": 50.0,
+    "pipelineDepthBiasInput": 0.10000000149011612,
+    "pipelineNormalBiasInput": 0.5,
+    "cameraFOV": 45.0,
+    "lightStrength": 1.0,
+    "cameraPosition": {
+      "x": 8.0,
+      "y": 7.0,
+      "z": -11.0
+    },
+    "cameraRotation": {
+      "x": 23.964643478393555,
+      "y": 325.63720703125,
+      "z": -4.671575482007029e-07
+    },
+    "lightRotation": {
+      "x": 45.0,
+      "y": 145.0,
+      "z": 1.2074183359800372e-06
+    },
+    "mainLightShadowParams": {
+      "x": 1.0,
+      "y": 3.0,
+      "z": 0.0019616957288235426,
+      "w": -3.9042391777038574
+    },
+    "mainLightShadowmapSize": {
+      "x": 0.00048828125,
+      "y": 0.00048828125,
+      "z": 2048.0,
+      "w": 2048.0
+    },
+    "shadowBiasGlobalDiagnostic": {
+      "x": -0.014669103547930717,
+      "y": -0.07334551215171814,
+      "z": 1.0,
+      "w": 0.0
+    }
+  },
+  "sha256": {
+    "observations.csv": "4B17ACC3A75436DA459770E169956AB27395C453BF01B439FADE357E8618BAFA",
+    "timing_smoke.json": "3C292DED6DE64DB93EBD83529B302E718A28A5DD43EAB7EE916130EFF3145C08"
+  },
+  "classification": "Availability smoke with ambient GPU activity and instrumentation overhead. No PCF-only cost or performance gain claim."
+}

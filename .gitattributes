@@ -74,6 +74,11 @@ Packages/packages-lock.json linguist-generated
 *.cubemap               lfs
 *.unitypackage          lfs
 
+# Preserve experimental evidence byte-for-byte, including its original newlines.
+Captures/NativeBaselines/**/*.json -text whitespace=cr-at-eol
+Measurements/FrameTiming/**/*.csv -text whitespace=cr-at-eol
+Measurements/FrameTiming/**/*.json -text whitespace=cr-at-eol
+
 # 3D models
 *.3dm                   lfs
 *.3ds                   lfs

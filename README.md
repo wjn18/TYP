@@ -2,13 +2,17 @@
 
 **Project:** Investigating the Performance–Quality Trade-off of Shadow Map Filtering in Unity
 
-A Unity 6.6 URP project for investigating PCF shadow filtering. The current repository contains an initial controlled scene and native High rendering configuration.
+A Unity 6.6 URP project for investigating PCF shadow filtering. The current working tree contains a controlled scene and a native Hard/Low/Medium/High capture workflow.
 
 ## Current status
 
 The initial environment was configured and checked in the Unity Editor on **2 November 2026**. The scene entered and exited Play mode successfully, rendered at 1920 × 1080, and the final Console check returned no errors or warnings.
 
-The settings are initial development values. Standalone Player validation, repeatable GPU timing, baseline comparisons, motion replay, full-evaluation equivalence and adaptive sampling remain future work. There are no performance improvement results yet.
+On **10 November 2026**, the first static native-preset suites were reproduced in the Editor and a standalone Windows Player. Both valid suites contain five captures, with High repeated; corresponding Editor/Player images have identical SHA-256 values. See [native baseline reproduction](Documentation/native-baselines.md) for commands, filter/bias records and the retained invalid hidden-window run.
+
+Also on **10 November 2026**, a standalone native High timing smoke collected three sets of 1,000 valid unique CPU/GPU frame timings. Approximately 10% of measurement polls returned GPU=0 and were retained but excluded. See [frame timing availability](Documentation/frame-timing-smoke.md) for raw-data locations, commands and limitations.
+
+The settings remain initial development values. Formal timing reliability, motion replay, full-evaluation equivalence and adaptive sampling remain future work. There are no performance improvement results yet. Task C is in progress; M2 has not been passed.
 
 ## Requirements and opening the project
 
@@ -58,9 +62,16 @@ The scene contains a receiving plane, a block, a thin wall and three posts of wi
 - `Assets/Experiments/Settings/`: separate experiment URP asset and Renderer.
 - `Assets/Experiments/Materials/`: URP Lit materials.
 - `Assets/Experiments/Runtime/`: display and frame-rate controls.
+- `Assets/Experiments/Runtime/NativeBaselineRunner.cs`: native preset selection and diagnostic capture suite.
 - `Assets/Scenes/PCF_Baseline.unity`: active initial scene.
 - `Documentation/initial-environment.json`: recorded environment and Editor Play checks.
 - `Documentation/native-source-hashes.json`: hashes of the unmodified native URP/Core source inspected during setup.
 - `Captures/EnvironmentSetup/`: self-generated setup screenshots.
+- `Captures/NativeBaselines/`: native baseline images, configuration metadata and retained invalid captures.
+- `Documentation/native-baselines.md`: reproduction steps, current results and limitations.
+- `Assets/Experiments/Runtime/FrameTimingSmokeProbe.cs`: explicitly requested timing availability collector.
+- `Measurements/FrameTiming/`: raw polling observations, configuration and retained invalid timing returns.
+- `Documentation/frame-timing-smoke.md`: timing commands and availability results with limitations.
+- `Tools/analysis/analyse_timing.py`: independent validation and summary calculation from the recorded raw timing observations.
 
 Unity package source remains in the installed packages. The repository preserves package references, lock data and source hashes; it does not vendor or modify URP. Cache, logs, user settings, generated IDE projects and build outputs are excluded by the Unity ignore rules.
